@@ -1,24 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SeeGreenApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <arView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SMg-ay-J7H">
+                                <rect key="frame" x="0.0" y="44" width="414" height="778"/>
+                            </arView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Ncb-0r-T9X">
+                                <rect key="frame" x="20" y="815" width="374" height="47"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ogd-N3-Y4E">
+                                        <rect key="frame" x="0.0" y="0.0" width="124.5" height="47"/>
+                                        <state key="normal" title="Teapot"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ukN-40-tCK">
+                                        <rect key="frame" x="124.5" y="0.0" width="125" height="47"/>
+                                        <state key="normal" title="Roboit"/>
+                                        <connections>
+                                            <action selector="placeRobot:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MhY-wj-Lq0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ibo-KC-9uu">
+                                        <rect key="frame" x="249.5" y="0.0" width="124.5" height="47"/>
+                                        <state key="normal" title="Plane"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SMg-ay-J7H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8mC-WS-XKd"/>
+                            <constraint firstItem="Ncb-0r-T9X" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Adx-LQ-FQB"/>
+                            <constraint firstItem="Ncb-0r-T9X" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="771" id="VIq-Bs-tB2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SMg-ay-J7H" secondAttribute="bottom" constant="40" id="phq-zp-hE5"/>
+                            <constraint firstItem="Ncb-0r-T9X" firstAttribute="centerX" secondItem="SMg-ay-J7H" secondAttribute="centerX" id="tx6-A0-UL7"/>
+                            <constraint firstItem="Ncb-0r-T9X" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="vKH-ak-ZNa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SMg-ay-J7H" secondAttribute="trailing" id="w8b-qb-kZk"/>
+                            <constraint firstItem="SMg-ay-J7H" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="x8I-VL-D1g"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="arView" destination="SMg-ay-J7H" id="cJz-V1-Dbo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="73.913043478260875" y="75.669642857142847"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F534CE72726316F003B130F /* 2021-BGCCTimesheets-CYSC-PayPeriod01.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3F534CE32726316F003B130F /* 2021-BGCCTimesheets-CYSC-PayPeriod01.pdf */; };
+		3F534CE82726316F003B130F /* toy_biplane.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3F534CE42726316F003B130F /* toy_biplane.usdz */; };
+		3F534CE92726316F003B130F /* toy_robot_vintage.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3F534CE52726316F003B130F /* toy_robot_vintage.usdz */; };
+		3F534CEA2726316F003B130F /* teapot.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3F534CE62726316F003B130F /* teapot.usdz */; };
+		3F534CEC27263A3B003B130F /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F534CEB27263A3B003B130F /* Model.swift */; };
 		3FF1C7672722270E0004F58D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1C7662722270E0004F58D /* AppDelegate.swift */; };
 		3FF1C7692722270E0004F58D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1C7682722270E0004F58D /* SceneDelegate.swift */; };
 		3FF1C76B2722270E0004F58D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1C76A2722270E0004F58D /* ViewController.swift */; };
@@ -16,6 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F534CE32726316F003B130F /* 2021-BGCCTimesheets-CYSC-PayPeriod01.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "2021-BGCCTimesheets-CYSC-PayPeriod01.pdf"; path = "../../../../../Downloads/2021-BGCCTimesheets-CYSC-PayPeriod01.pdf"; sourceTree = "<group>"; };
+		3F534CE42726316F003B130F /* toy_biplane.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = toy_biplane.usdz; path = ../../../../../Downloads/toy_biplane.usdz; sourceTree = "<group>"; };
+		3F534CE52726316F003B130F /* toy_robot_vintage.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = toy_robot_vintage.usdz; path = ../../../../../Downloads/toy_robot_vintage.usdz; sourceTree = "<group>"; };
+		3F534CE62726316F003B130F /* teapot.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = teapot.usdz; path = ../../../../../Downloads/teapot.usdz; sourceTree = "<group>"; };
+		3F534CEB27263A3B003B130F /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		3FF1C7632722270E0004F58D /* SeeGreenApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeeGreenApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FF1C7662722270E0004F58D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FF1C7682722270E0004F58D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +47,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F534CE227263150003B130F /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				3F534CE32726316F003B130F /* 2021-BGCCTimesheets-CYSC-PayPeriod01.pdf */,
+				3F534CE62726316F003B130F /* teapot.usdz */,
+				3F534CE42726316F003B130F /* toy_biplane.usdz */,
+				3F534CE52726316F003B130F /* toy_robot_vintage.usdz */,
+				3F534CEB27263A3B003B130F /* Model.swift */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
 		3FF1C75A2722270E0004F58D = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +78,7 @@
 		3FF1C7652722270E0004F58D /* SeeGreenApp */ = {
 			isa = PBXGroup;
 			children = (
+				3F534CE227263150003B130F /* assets */,
 				3FF1C7662722270E0004F58D /* AppDelegate.swift */,
 				3FF1C7682722270E0004F58D /* SceneDelegate.swift */,
 				3FF1C76A2722270E0004F58D /* ViewController.swift */,
@@ -125,7 +148,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FF1C773272227100004F58D /* LaunchScreen.storyboard in Resources */,
+				3F534CE82726316F003B130F /* toy_biplane.usdz in Resources */,
+				3F534CE92726316F003B130F /* toy_robot_vintage.usdz in Resources */,
+				3F534CEA2726316F003B130F /* teapot.usdz in Resources */,
 				3FF1C770272227100004F58D /* Assets.xcassets in Resources */,
+				3F534CE72726316F003B130F /* 2021-BGCCTimesheets-CYSC-PayPeriod01.pdf in Resources */,
 				3FF1C76E2722270E0004F58D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,6 +167,7 @@
 				3FF1C76B2722270E0004F58D /* ViewController.swift in Sources */,
 				3FF1C7672722270E0004F58D /* AppDelegate.swift in Sources */,
 				3FF1C7692722270E0004F58D /* SceneDelegate.swift in Sources */,
+				3F534CEC27263A3B003B130F /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
