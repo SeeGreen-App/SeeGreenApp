@@ -1,24 +1,133 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XOn-m7-y3Z">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--map-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MapViewController" customModule="SeeGreenApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ek6-dA-9aR">
+                                <rect key="frame" x="0.0" y="130" width="414" height="683"/>
+                            </mapView>
+                            <searchBar contentMode="redraw" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oNj-UP-R9S">
+                                <rect key="frame" x="0.0" y="44" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oNj-UP-R9S" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="2lg-vB-iam"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ek6-dA-9aR" secondAttribute="bottom" id="Czh-pG-Nsf"/>
+                            <constraint firstItem="ek6-dA-9aR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Sg3-qc-cAW"/>
+                            <constraint firstItem="ek6-dA-9aR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="d3J-eq-Owl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ek6-dA-9aR" secondAttribute="trailing" id="qt9-nj-vlU"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="map" image="mappin.circle.fill" catalog="system" id="jy4-oe-ou8"/>
+                    <connections>
+                        <outlet property="MapView" destination="ek6-dA-9aR" id="hbg-8d-Sbf"/>
+                        <outlet property="searchBar" destination="oNj-UP-R9S" id="T31-ZC-VqZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1634.7826086956522" y="-299.33035714285711"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="29A-P6-5Jp">
+            <objects>
+                <viewController id="51z-9z-hVI" customClass="HomeViewController" customModule="SeeGreenApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3EX-7o-GZl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2021-10-25 at 9.34.09 PM" translatesAutoresizingMaskIntoConstraints="NO" id="noH-Zx-nuq">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4bE-tX-E6u"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="noH-Zx-nuq" firstAttribute="leading" secondItem="4bE-tX-E6u" secondAttribute="leading" id="EtP-kx-80l"/>
+                            <constraint firstItem="noH-Zx-nuq" firstAttribute="top" secondItem="4bE-tX-E6u" secondAttribute="top" id="Iot-TZ-ElY"/>
+                            <constraint firstItem="4bE-tX-E6u" firstAttribute="trailing" secondItem="noH-Zx-nuq" secondAttribute="trailing" id="dAX-5F-z23"/>
+                            <constraint firstItem="4bE-tX-E6u" firstAttribute="bottom" secondItem="noH-Zx-nuq" secondAttribute="bottom" id="oVj-hj-jca"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="IYJ-FQ-wBp"/>
+                    <connections>
+                        <outlet property="imageView" destination="noH-Zx-nuq" id="eUa-yP-lzg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Ev-Xs-I2Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2349" y="-299"/>
+        </scene>
+        <!--AR-->
+        <scene sceneID="5Ql-1g-gwl">
+            <objects>
+                <viewController id="Uvw-Ww-RdY" customClass="ARViewController" customModule="SeeGreenApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gMU-Ju-iNE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2021-10-25 at 9.34.09 PM" translatesAutoresizingMaskIntoConstraints="NO" id="laF-9S-6L4">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RoU-7e-4uO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="laF-9S-6L4" firstAttribute="leading" secondItem="RoU-7e-4uO" secondAttribute="leading" id="4hE-87-801"/>
+                            <constraint firstItem="laF-9S-6L4" firstAttribute="top" secondItem="RoU-7e-4uO" secondAttribute="top" id="MTx-7s-tnC"/>
+                            <constraint firstItem="RoU-7e-4uO" firstAttribute="bottom" secondItem="laF-9S-6L4" secondAttribute="bottom" id="tDd-Vf-d4D"/>
+                            <constraint firstItem="RoU-7e-4uO" firstAttribute="trailing" secondItem="laF-9S-6L4" secondAttribute="trailing" id="y8U-ae-xBU"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="AR" image="leaf.fill" catalog="system" id="Xiw-hw-BIl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gUF-Zd-GSo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="896" y="429"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="lZn-9h-QpA">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="XOn-m7-y3Z" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ktk-bz-Akw">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="WjF-if-WRF"/>
+                        <segue destination="51z-9z-hVI" kind="relationship" relationship="viewControllers" id="zdg-CE-9Qg"/>
+                        <segue destination="Uvw-Ww-RdY" kind="relationship" relationship="viewControllers" id="iqm-77-64y"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NXV-jG-wZH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="897" y="-299"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Screen Shot 2021-10-25 at 9.34.09 PM" width="884" height="680"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="leaf.fill" catalog="system" width="128" height="106"/>
+        <image name="mappin.circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

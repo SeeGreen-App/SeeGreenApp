@@ -13,6 +13,9 @@
 		3FF1C76E2722270E0004F58D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FF1C76C2722270E0004F58D /* Main.storyboard */; };
 		3FF1C770272227100004F58D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FF1C76F272227100004F58D /* Assets.xcassets */; };
 		3FF1C773272227100004F58D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FF1C771272227100004F58D /* LaunchScreen.storyboard */; };
+		EEB9D66027279E7400E9643F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB9D65F27279E7400E9643F /* MapViewController.swift */; };
+		EEB9D66227279E8400E9643F /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB9D66127279E8400E9643F /* ARViewController.swift */; };
+		EEB9D66427279E9A00E9643F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB9D66327279E9A00E9643F /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		3FF1C76F272227100004F58D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FF1C772272227100004F58D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3FF1C774272227100004F58D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEB9D65F27279E7400E9643F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		EEB9D66127279E8400E9643F /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		EEB9D66327279E9A00E9643F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,9 @@
 				3FF1C76F272227100004F58D /* Assets.xcassets */,
 				3FF1C771272227100004F58D /* LaunchScreen.storyboard */,
 				3FF1C774272227100004F58D /* Info.plist */,
+				EEB9D65F27279E7400E9643F /* MapViewController.swift */,
+				EEB9D66127279E8400E9643F /* ARViewController.swift */,
+				EEB9D66327279E9A00E9643F /* HomeViewController.swift */,
 			);
 			path = SeeGreenApp;
 			sourceTree = "<group>";
@@ -140,6 +149,9 @@
 				3FF1C76B2722270E0004F58D /* ViewController.swift in Sources */,
 				3FF1C7672722270E0004F58D /* AppDelegate.swift in Sources */,
 				3FF1C7692722270E0004F58D /* SceneDelegate.swift in Sources */,
+				EEB9D66027279E7400E9643F /* MapViewController.swift in Sources */,
+				EEB9D66227279E8400E9643F /* ARViewController.swift in Sources */,
+				EEB9D66427279E9A00E9643F /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
