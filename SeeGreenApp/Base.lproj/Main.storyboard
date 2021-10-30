@@ -16,28 +16,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ek6-dA-9aR">
-                                <rect key="frame" x="0.0" y="130" width="414" height="683"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5Cz-A6-otX">
+                                <rect key="frame" x="0.0" y="127" width="414" height="686"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
-                            <searchBar contentMode="redraw" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oNj-UP-R9S">
-                                <rect key="frame" x="0.0" y="44" width="414" height="51"/>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LS1-wC-EtJ">
+                                <rect key="frame" x="0.0" y="64" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="oNj-UP-R9S" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="2lg-vB-iam"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ek6-dA-9aR" secondAttribute="bottom" id="Czh-pG-Nsf"/>
-                            <constraint firstItem="ek6-dA-9aR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Sg3-qc-cAW"/>
-                            <constraint firstItem="ek6-dA-9aR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="d3J-eq-Owl"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ek6-dA-9aR" secondAttribute="trailing" id="qt9-nj-vlU"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="map" image="mappin.circle.fill" catalog="system" id="jy4-oe-ou8"/>
                     <connections>
-                        <outlet property="MapView" destination="ek6-dA-9aR" id="hbg-8d-Sbf"/>
-                        <outlet property="searchBar" destination="oNj-UP-R9S" id="T31-ZC-VqZ"/>
+                        <outlet property="mapView" destination="5Cz-A6-otX" id="2ui-So-jUG"/>
+                        <outlet property="searchClicked" destination="LS1-wC-EtJ" id="OHU-Yb-5iy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -72,7 +67,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Ev-Xs-I2Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2349" y="-299"/>
+            <point key="canvasLocation" x="2370" y="-299"/>
         </scene>
         <!--AR-->
         <scene sceneID="5Ql-1g-gwl">
@@ -99,7 +94,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gUF-Zd-GSo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="896" y="429"/>
+            <point key="canvasLocation" x="896" y="388"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="lZn-9h-QpA">
@@ -107,6 +102,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="XOn-m7-y3Z" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ktk-bz-Akw">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -118,7 +114,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NXV-jG-wZH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="897" y="-299"/>
+            <point key="canvasLocation" x="896" y="-299"/>
         </scene>
     </scenes>
     <resources>
