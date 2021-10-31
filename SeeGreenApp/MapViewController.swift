@@ -9,165 +9,52 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UISearchBarDelegate {
+class MapViewController: UIViewController, MKMapViewDelegate {
+    
+    let map = MKMapView()
+    let coordinate = CLLocationCoordinate2D(latitude: 42.1490, longitude: -87.7896)
     
     
-    @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var searchClicked: UISearchController!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.addSubview(map)
+        map.frame = view.bounds
+        map.setRegion(MKCoordinateRegion(center: coordinate, span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)), animated: false)
+        
+        map.delegate = self
+        
+        addCustomPin()
+    }
     
-       
-        var locationManager = CLLocationManager()
-
-        let authorizationStatus = CLLocationManager.authorizationStatus()
-        let regionRadius: Double = 1000
-        var numberOfLongPress : Int = 0
-
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            // Do any additional setup after loading the view.
-            mapView.delegate = self
-            locationManager.delegate = self
-            configureLocationServices()
-            locationManager.startUpdatingLocation()
-            mapView.showsUserLocation = true
-        }
-
+    private func addCustomPin() {
+        let pin = MKPointAnnotation()
+        pin.coordinate = coordinate
+        pin.title = "We have plant's here"
+        pin.subtitle = "Take a look"
+        map.addAnnotation(pin)
+    }
     
-
-     @IBAction func searchClicked(_ sender: Any) {
-        let searchController = UISearchController(searchResultsController: nil)
-        searchController.searchBar.delegate = self
-        present(searchController, animated: true, completion: nil)
-    }
-
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        let activityIndicator = UIActivityIndicatorView()
-        activityIndicator.style = UIActivityIndicatorView.Style.medium
-        activityIndicator.center = self.view.center
-        activityIndicator.startAnimating()
-
-        self.view.addSubview(activityIndicator)
-
-        //Cancels searchBar
-        searchBar.resignFirstResponder()
-        dismiss(animated: true, completion: nil)
-
-        // actually search the request
-        let searchRequest = MKLocalSearch.Request()
-        searchRequest.naturalLanguageQuery = searchBar.text
-
-        let activeSearch = MKLocalSearch(request: searchRequest)
-        activeSearch.start{ (response, error) in
-
-
-            if response == nil   // TROUBLE
-            {
-                print("ERROR")
-            }
-            else
-            {
-                //Remove annotations
-                let annotations = self.mapView.annotations
-                self.mapView.removeAnnotations(annotations)
-
-                //Getting data
-                let latitude = response?.boundingRegion.center.latitude
-                let longitude = response?.boundingRegion.center.longitude
-
-               //Create annotation
-               let annotation = MKPointAnnotation()
-               annotation.title = searchBar.text
-               annotation.coordinate = CLLocationCoordinate2DMake(latitude!, longitude!)
-               self.mapView.addAnnotation(annotation)
-
-                 //Zooming in on annotation
-                let coordinate:CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude!, longitude!)
-                let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
-                let region = MKCoordinateRegion(center: coordinate, span: span)
-                self.mapView.setRegion(region, animated: true)
-            }
-
+    
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard !(annotation is MKUserLocation)
+        else {
+            return nil
         }
-    }
-
-    // This function represents the longPress for the app in order to drop a pin with and the address will be displayed
-    @IBAction func longPressDetected(_ sender: UILongPressGestureRecognizer) {
-        let touchPoint = sender.location(in: mapView)
-        let newCoordinates = mapView.convert(touchPoint, toCoordinateFrom: mapView)
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = newCoordinates
-        mapView.addAnnotation(annotation)
-        var addressString = ""
-        lookUpCurrentLocation(coordinate: newCoordinates) { (placemark) in
-        let newPin = MKPointAnnotation()
-        newPin.coordinate = newCoordinates
-            if let placemark = placemark{
-                addressString = "\(String(describing: placemark.subThoroughfare!)) \(String(describing: placemark.thoroughfare!))"
-                print(addressString)
-
-                newPin.title = addressString
-                self.mapView.addAnnotation(newPin)
-            }
+        
+        var annotationView = map.dequeueReusableAnnotationView(withIdentifier: "custom")
+        
+        if annotationView == nil {
+            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "custom")
+            annotationView?.canShowCallout = true
         }
-    }
-
-    // Gesture recognizer
-    func action(gestureRecognizer:UIGestureRecognizer){
-        let touchPoint = gestureRecognizer.location(in: mapView)
-        let newCoordinates = mapView.convert(touchPoint, toCoordinateFrom: mapView)
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = newCoordinates
-        mapView.addAnnotation(annotation)
-    }
-
-    // Centers the map around the current location of the user
-    func centerMapOnUserLocation() {
-        guard let coordinate = locationManager.location?.coordinate else {return}
-        let coordinateRegion = MKCoordinateRegion(center: coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
-        mapView.setRegion(coordinateRegion, animated: true)
-    }
-
-    // a function that if the location isn't known, it'll ask to request your location
-    func configureLocationServices() {
-        if authorizationStatus == .notDetermined {
-            locationManager.requestWhenInUseAuthorization()
-            locationManager.requestAlwaysAuthorization()
-        } else {
-            return
+        else {
+            annotationView?.annotation = annotation
         }
-    }
-
-    // reverse geoCodes in order to determine the address after the pindrop
-    func lookUpCurrentLocation(coordinate: CLLocationCoordinate2D, completionHandler : @escaping (CLPlacemark?)
-                    -> Void ) {
-        // Use the last reported location.
-         let lastLocation = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
-            let geocoder = CLGeocoder()
-
-            // Look up the location and pass it to the completion handler
-            geocoder.reverseGeocodeLocation(lastLocation,
-                        completionHandler: { (placemarks, error) in
-                if error == nil {
-                    let firstLocation = placemarks?[0]
-                    completionHandler(firstLocation)
-                }
-                else {
-                 // An error occurred during geocoding.
-                    completionHandler(nil)
-                }
-            })
-    }
-
-    // authorizes devices to access location
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        if authorizationStatus == .authorizedWhenInUse || authorizationStatus == .authorizedAlways{
-            locationManager.startUpdatingLocation()
-        }
-        centerMapOnUserLocation()
-    }
-
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        centerMapOnUserLocation()
+        
+        annotationView?.image = UIImage(named: "plant")
+        
+        
+        return annotationView
     }
 }
-
