@@ -52,27 +52,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2021-10-25 at 9.34.09 PM" translatesAutoresizingMaskIntoConstraints="NO" id="noH-Zx-nuq">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
-                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7CA-xU-w3X">
+                                <rect key="frame" x="0.0" y="244" width="414" height="344"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellTest" id="RRf-7H-OrQ">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RRf-7H-OrQ" id="n4M-HO-NDw">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="3EX-7o-GZl" id="cPb-GW-LwO"/>
+                                    <outlet property="delegate" destination="3EX-7o-GZl" id="iq6-fW-0Xy"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4bE-tX-E6u"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="noH-Zx-nuq" firstAttribute="leading" secondItem="4bE-tX-E6u" secondAttribute="leading" id="EtP-kx-80l"/>
-                            <constraint firstItem="noH-Zx-nuq" firstAttribute="top" secondItem="4bE-tX-E6u" secondAttribute="top" id="Iot-TZ-ElY"/>
-                            <constraint firstItem="4bE-tX-E6u" firstAttribute="trailing" secondItem="noH-Zx-nuq" secondAttribute="trailing" id="dAX-5F-z23"/>
-                            <constraint firstItem="4bE-tX-E6u" firstAttribute="bottom" secondItem="noH-Zx-nuq" secondAttribute="bottom" id="oVj-hj-jca"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="IYJ-FQ-wBp"/>
                     <connections>
-                        <outlet property="imageView" destination="noH-Zx-nuq" id="eUa-yP-lzg"/>
+                        <outlet property="tableView" destination="7CA-xU-w3X" id="nc4-MN-2AL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Ev-Xs-I2Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2349" y="-299"/>
+            <point key="canvasLocation" x="2347.826086956522" y="-299.33035714285711"/>
         </scene>
         <!--AR-->
         <scene sceneID="5Ql-1g-gwl">
@@ -82,24 +92,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2021-10-25 at 9.34.09 PM" translatesAutoresizingMaskIntoConstraints="NO" id="laF-9S-6L4">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
-                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Wfe-7V-AXW">
+                                <rect key="frame" x="0.0" y="756" width="414" height="57"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQi-tm-HRN">
+                                        <rect key="frame" x="0.0" y="0.0" width="75" height="57"/>
+                                        <state key="normal" title="Monstera"/>
+                                        <connections>
+                                            <action selector="addMonstera:" destination="Uvw-Ww-RdY" eventType="touchUpInside" id="Pfj-Cu-WfY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zM9-sR-uCD">
+                                        <rect key="frame" x="85" y="0.0" width="74.5" height="57"/>
+                                        <state key="normal" title="Jade Succulent"/>
+                                        <connections>
+                                            <action selector="addJadeSucculent:" destination="Uvw-Ww-RdY" eventType="touchUpInside" id="54k-b6-Bqq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xek-QP-sv4">
+                                        <rect key="frame" x="169.5" y="0.0" width="75" height="57"/>
+                                        <state key="normal" title="Fern"/>
+                                        <connections>
+                                            <action selector="addFern:" destination="Uvw-Ww-RdY" eventType="touchUpInside" id="b0C-nV-ank"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r2O-8h-3HU">
+                                        <rect key="frame" x="254.5" y="0.0" width="74.5" height="57"/>
+                                        <state key="normal" title="Basil"/>
+                                        <connections>
+                                            <action selector="addBasil:" destination="Uvw-Ww-RdY" eventType="touchUpInside" id="9ao-O9-d6p"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jDT-oE-Gjf">
+                                        <rect key="frame" x="339" y="0.0" width="75" height="57"/>
+                                        <state key="normal" title="Orchid"/>
+                                        <connections>
+                                            <action selector="addOrchid:" destination="Uvw-Ww-RdY" eventType="touchUpInside" id="ymI-9z-3Ox"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RoU-7e-4uO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="laF-9S-6L4" firstAttribute="leading" secondItem="RoU-7e-4uO" secondAttribute="leading" id="4hE-87-801"/>
-                            <constraint firstItem="laF-9S-6L4" firstAttribute="top" secondItem="RoU-7e-4uO" secondAttribute="top" id="MTx-7s-tnC"/>
-                            <constraint firstItem="RoU-7e-4uO" firstAttribute="bottom" secondItem="laF-9S-6L4" secondAttribute="bottom" id="tDd-Vf-d4D"/>
-                            <constraint firstItem="RoU-7e-4uO" firstAttribute="trailing" secondItem="laF-9S-6L4" secondAttribute="trailing" id="y8U-ae-xBU"/>
+                            <constraint firstItem="Wfe-7V-AXW" firstAttribute="bottom" secondItem="RoU-7e-4uO" secondAttribute="bottom" id="0Ck-5L-gh9"/>
+                            <constraint firstItem="Wfe-7V-AXW" firstAttribute="centerX" secondItem="gMU-Ju-iNE" secondAttribute="centerX" id="75F-2m-weP"/>
+                            <constraint firstItem="Wfe-7V-AXW" firstAttribute="leading" secondItem="RoU-7e-4uO" secondAttribute="leading" id="FC7-RU-uBj"/>
+                            <constraint firstItem="Wfe-7V-AXW" firstAttribute="top" secondItem="RoU-7e-4uO" secondAttribute="top" constant="712" id="KUG-Nf-cY9"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="AR" image="leaf.fill" catalog="system" id="Xiw-hw-BIl"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gUF-Zd-GSo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="896" y="429"/>
+            <point key="canvasLocation" x="895.6521739130435" y="428.57142857142856"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="lZn-9h-QpA">
@@ -107,6 +154,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="XOn-m7-y3Z" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ktk-bz-Akw">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -122,7 +170,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Screen Shot 2021-10-25 at 9.34.09 PM" width="884" height="680"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="leaf.fill" catalog="system" width="128" height="106"/>
         <image name="mappin.circle.fill" catalog="system" width="128" height="121"/>

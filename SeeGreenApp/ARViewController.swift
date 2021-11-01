@@ -8,22 +8,33 @@
 import UIKit
 
 class ARViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func addMonstera(_ sender: Any) {
+        plantsContainer.append(Plants(imageSet: UIImage(systemName: "multiply.circle.fill")!, typeName: "monstera"))
+            print("monsterra applied")
+        print(plantsContainer[plantsContainer.count - 1].name)
     }
-    */
-
+    
+    @IBAction func addJadeSucculent(_ sender: Any) {
+        plantsContainer.append(Plants(imageSet: UIImage(systemName: "multiply.circle.fill")!, typeName: "succulent"))
+    }
+    @IBAction func addFern(_ sender: Any) {
+        plantsContainer.append(Plants(imageSet: UIImage(systemName: "multiply.circle.fill")!, typeName: "fern"))
+    }
+    
+    @IBAction func addBasil(_ sender: Any) {
+        plantsContainer.append(Plants(imageSet: UIImage(systemName: "multiply.circle.fill")!, typeName: "basil"))
+    }
+    
+    @IBAction func addOrchid(_ sender: Any) {
+        plantsContainer.append(Plants(imageSet: UIImage(systemName: "multiply.circle.fill")!, typeName: "orchid"))
+    }
+    
+    
 }
