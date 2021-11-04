@@ -7,10 +7,11 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITabBarDelegate {
     
     
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var tabBar: UITabBarItem!
     
     
     override func viewDidLoad() {
