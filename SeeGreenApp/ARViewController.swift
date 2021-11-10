@@ -29,7 +29,33 @@ class ARViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        <#code#>
+        let indexPath = tableView.indexPathForSelectedRow
+        let currentCell = tableView.cellForRow(at: indexPath!)! as UITableViewCell
+        
+        let name:String = currentCell.textLabel!.text!
+        
+        switch name {
+        case "monsterra":
+            print("appending monsterra")
+            plantsContainer.append(Plants(imageSet: UIImage(systemName: "pencil")!, typeName: "Monsterra", nickName: "", wateringFrequency: 10))
+            print(plantsContainer[indexPath!.row].name)
+        case "basil":
+            print("appending monsterra")
+            plantsContainer.append(Plants(imageSet: UIImage(systemName: "pencil")!, typeName: "Basil", nickName: "", wateringFrequency: 10))
+        case "fern":
+            print("appending monsterra")
+            plantsContainer.append(Plants(imageSet: UIImage(systemName: "pencil")!, typeName: "Fern", nickName: "", wateringFrequency: 10))
+        case "orchid":
+            print("appending monsterra")
+            plantsContainer.append(Plants(imageSet: UIImage(systemName: "pencil")!, typeName: "Orchid", nickName: "", wateringFrequency: 10))
+        case "succulent":
+            print("appending monsterra")
+            plantsContainer.append(Plants(imageSet: UIImage(systemName: "pencil")!, typeName: "Succulent", nickName: "", wateringFrequency: 10))
+        default:
+            print("error")
+            
+        }
+        
     }
 
 }

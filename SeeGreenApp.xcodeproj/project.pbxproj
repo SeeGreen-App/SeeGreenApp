@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F091ADF273B5C5E00C5EC73 /* plants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F091ADE273B5C5E00C5EC73 /* plants.swift */; };
 		3FF1C7672722270E0004F58D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1C7662722270E0004F58D /* AppDelegate.swift */; };
 		3FF1C7692722270E0004F58D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1C7682722270E0004F58D /* SceneDelegate.swift */; };
 		3FF1C76B2722270E0004F58D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1C76A2722270E0004F58D /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F091ADE273B5C5E00C5EC73 /* plants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = plants.swift; sourceTree = "<group>"; };
 		3FF1C7632722270E0004F58D /* SeeGreenApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeeGreenApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FF1C7662722270E0004F58D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FF1C7682722270E0004F58D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				EEB9D65F27279E7400E9643F /* MapViewController.swift */,
 				EEB9D66127279E8400E9643F /* ARViewController.swift */,
 				EEB9D66327279E9A00E9643F /* HomeViewController.swift */,
+				3F091ADE273B5C5E00C5EC73 /* plants.swift */,
 			);
 			path = SeeGreenApp;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 				3FF1C76B2722270E0004F58D /* ViewController.swift in Sources */,
 				3FF1C7672722270E0004F58D /* AppDelegate.swift in Sources */,
 				3FF1C7692722270E0004F58D /* SceneDelegate.swift in Sources */,
+				3F091ADF273B5C5E00C5EC73 /* plants.swift in Sources */,
 				EEB9D66027279E7400E9643F /* MapViewController.swift in Sources */,
 				EEB9D66227279E8400E9643F /* ARViewController.swift in Sources */,
 				EEB9D66427279E9A00E9643F /* HomeViewController.swift in Sources */,
