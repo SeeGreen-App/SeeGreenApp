@@ -74,7 +74,7 @@
             </objects>
             <point key="canvasLocation" x="2349" y="-299"/>
         </scene>
-        <!--AR-->
+        <!--Catalogue-->
         <scene sceneID="5Ql-1g-gwl">
             <objects>
                 <viewController id="Uvw-Ww-RdY" customClass="ARViewController" customModule="SeeGreenApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -82,24 +82,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2021-10-25 at 9.34.09 PM" translatesAutoresizingMaskIntoConstraints="NO" id="laF-9S-6L4">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
-                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QpT-Tj-f8C">
+                                <rect key="frame" x="20" y="156" width="374" height="644"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellID" id="GPE-zB-vrd">
+                                        <rect key="frame" x="0.0" y="24.5" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GPE-zB-vrd" id="Ka4-W0-yQV">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="gMU-Ju-iNE" id="THe-hE-Qnf"/>
+                                    <outlet property="delegate" destination="gMU-Ju-iNE" id="6ml-VV-UHn"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RoU-7e-4uO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="laF-9S-6L4" firstAttribute="leading" secondItem="RoU-7e-4uO" secondAttribute="leading" id="4hE-87-801"/>
-                            <constraint firstItem="laF-9S-6L4" firstAttribute="top" secondItem="RoU-7e-4uO" secondAttribute="top" id="MTx-7s-tnC"/>
-                            <constraint firstItem="RoU-7e-4uO" firstAttribute="bottom" secondItem="laF-9S-6L4" secondAttribute="bottom" id="tDd-Vf-d4D"/>
-                            <constraint firstItem="RoU-7e-4uO" firstAttribute="trailing" secondItem="laF-9S-6L4" secondAttribute="trailing" id="y8U-ae-xBU"/>
-                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="AR" image="leaf.fill" catalog="system" id="Xiw-hw-BIl"/>
+                    <tabBarItem key="tabBarItem" title="Catalogue" image="leaf.fill" catalog="system" id="Xiw-hw-BIl"/>
+                    <connections>
+                        <outlet property="tableView" destination="QpT-Tj-f8C" id="vAs-Gy-4wm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gUF-Zd-GSo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="896" y="429"/>
+            <point key="canvasLocation" x="895.6521739130435" y="428.57142857142856"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="lZn-9h-QpA">
@@ -107,6 +120,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="XOn-m7-y3Z" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ktk-bz-Akw">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
