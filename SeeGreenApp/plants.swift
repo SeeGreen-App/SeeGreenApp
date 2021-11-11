@@ -28,10 +28,21 @@ class Plants {
 
     
     func refillWater() {
-        waterLevel = waterLevel + 10;
+        waterLevel = waterLevel + wateringNeed;
     }
     
     
 }
 
 var plantsContainer = [Plants]();
+
+class plantsDescription {
+    init (setName:String, setDescrip:String, setImg:UIImage) {
+        name = setName
+        description = setDescrip
+        plantIcon = setImg
+    }
+    var name:String = "none"
+    var description:String = "none"
+    var plantIcon:UIImage = UIImage(systemName: "pencil")!
+}
