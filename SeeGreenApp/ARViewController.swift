@@ -29,7 +29,7 @@ class ARViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellID")
         cell?.textLabel!.text = plantsArr[indexPath.row]
-        cell?.detailTextLabel?.text = plantsArr[indexPath.row].waterLevel
+        //cell?.detailTextLabel?.text = plantsArr[indexPath.row].waterLevel
         return cell!
         
     }
