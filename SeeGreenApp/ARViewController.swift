@@ -12,6 +12,10 @@ class ARViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
     var plantsArr = ["monsterra", "basil", "fern", "orchid", "succulent"]
     @IBOutlet var tableView: UITableView!
     
+
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -34,28 +38,93 @@ class ARViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
         
         let name:String = currentCell.textLabel!.text!
         
+        var nameOfPlant = "Unnamed"
+        
         switch name {
+        
         case "monsterra":
-            print("appending monsterra")
-            plantsContainer.append(Plants(imageSet: UIImage(systemName: "pencil")!, typeName: "Monsterra", nickName: "", wateringFrequency: 10))
-            print(plantsContainer[indexPath!.row].name)
+            let messsage = UIAlertController(title: "", message: "What would you like to name your new plant?", preferredStyle: .alert)
+            messsage.addTextField { UITextField in
+                UITextField.placeholder = "Type name here"
+                
+                let add = UIAlertAction(title: "OK", style: .default) { alert in
+                    nameOfPlant = (messsage.textFields?.first!.text)!
+                    plantsContainer.append(Plants(imageSet: UIImage(systemName: "pencil")!, typeName: "Monsterra", nickName: nameOfPlant, wateringFrequency: 10))
+                }
+                messsage.addAction(add)
+
+            }
+            self.present(messsage, animated: true, completion: nil)
+            
         case "basil":
-            print("appending monsterra")
-            plantsContainer.append(Plants(imageSet: UIImage(systemName: "pencil")!, typeName: "Basil", nickName: "", wateringFrequency: 10))
+            let messsage = UIAlertController(title: "", message: "What would you like to name your new plant?", preferredStyle: .alert)
+            messsage.addTextField { UITextField in
+                UITextField.placeholder = "Type name here"
+                
+                let add = UIAlertAction(title: "OK", style: .default) { alert in
+                    nameOfPlant = (messsage.textFields?.first!.text)!
+                    plantsContainer.append(Plants(imageSet: UIImage(systemName: "pencil")!, typeName: "Basil", nickName: nameOfPlant, wateringFrequency: 10))
+                }
+                messsage.addAction(add)
+
+            }
+            self.present(messsage, animated: true, completion: nil)
+            
         case "fern":
-            print("appending monsterra")
-            plantsContainer.append(Plants(imageSet: UIImage(systemName: "pencil")!, typeName: "Fern", nickName: "", wateringFrequency: 10))
+            let messsage = UIAlertController(title: "", message: "What would you like to name your new plant?", preferredStyle: .alert)
+            messsage.addTextField { UITextField in
+                UITextField.placeholder = "Type name here"
+                
+                let add = UIAlertAction(title: "OK", style: .default) { alert in
+                    nameOfPlant = (messsage.textFields?.first!.text)!
+                    plantsContainer.append(Plants(imageSet: UIImage(systemName: "pencil")!, typeName: "Fern", nickName: nameOfPlant, wateringFrequency: 10))
+                }
+                messsage.addAction(add)
+
+            }
+            self.present(messsage, animated: true, completion: nil)
+            
         case "orchid":
-            print("appending monsterra")
-            plantsContainer.append(Plants(imageSet: UIImage(systemName: "pencil")!, typeName: "Orchid", nickName: "", wateringFrequency: 10))
+            let messsage = UIAlertController(title: "", message: "What would you like to name your new plant?", preferredStyle: .alert)
+            messsage.addTextField { UITextField in
+                UITextField.placeholder = "Type name here"
+                
+                let add = UIAlertAction(title: "OK", style: .default) { alert in
+                    nameOfPlant = (messsage.textFields?.first!.text)!
+                    plantsContainer.append(Plants(imageSet: UIImage(systemName: "pencil")!, typeName: "Orchid", nickName: nameOfPlant, wateringFrequency: 10))
+                }
+                messsage.addAction(add)
+
+            }
+            self.present(messsage, animated: true, completion: nil)
+            
         case "succulent":
-            print("appending monsterra")
-            plantsContainer.append(Plants(imageSet: UIImage(systemName: "pencil")!, typeName: "Succulent", nickName: "", wateringFrequency: 10))
+            let messsage = UIAlertController(title: "", message: "What would you like to name your new plant?", preferredStyle: .alert)
+            messsage.addTextField { UITextField in
+                UITextField.placeholder = "Type name here"
+                
+                let add = UIAlertAction(title: "OK", style: .default) { alert in
+                    nameOfPlant = (messsage.textFields?.first!.text)!
+                    plantsContainer.append(Plants(imageSet: UIImage(systemName: "pencil")!, typeName: "Succulent", nickName: nameOfPlant, wateringFrequency: 10))
+                }
+                messsage.addAction(add)
+
+            }
+            self.present(messsage, animated: true, completion: nil)
+            
         default:
             print("error")
             
         }
         
+    }
+    
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let currentTable = tableView.indexPathForSelectedRow
+        
+        let vc = TestViewController()
+        navigationController?.pushViewController(vc, animated: true)
+        return nil
     }
 
 }

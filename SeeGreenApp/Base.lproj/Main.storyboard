@@ -68,7 +68,6 @@
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="3EX-7o-GZl" id="nFl-Dy-Qci"/>
-                                    <outlet property="prefetchDataSource" destination="3EX-7o-GZl" id="bMq-KA-ns1"/>
                                 </connections>
                             </tableView>
                         </subviews>

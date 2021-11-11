@@ -6,14 +6,29 @@
 //
 
 import UIKit
+import UserNotifications
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
+    private func requestNotificationAuthorization(applicaiton: UIApplication) {
+        
+    
+    let center = UNUserNotificationCenter.current()
+    let options : UNAuthorizationOptions = [.alert, .badge, .sound]
+    
+    center.requestAuthorization(options: options) {
+        granted, error in
+        if let error = error {
+            print(error.localizedDescription)
+        }
+    }
+    }
+    
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        requestNotificationAuthorization(applicaiton: application)
         return true
     }
 
