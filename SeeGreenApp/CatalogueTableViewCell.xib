@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CatalogueTableViewCell" rowHeight="100" id="KGk-i7-Jjw" customClass="CatalogueTableViewCell" customModule="SeeGreenApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="63C-uX-3Rq">
+                        <rect key="frame" x="16" y="19" width="70" height="70"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="98" id="Wi0-Q8-BBu"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mC8-aJ-x51">
+                        <rect key="frame" x="113" y="31" width="103" height="38"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="38" id="Lli-5h-TOM"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gM-Vw-URY">
+                        <rect key="frame" x="249" y="9" width="55" height="41"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="55" id="NTh-p1-Ys0"/>
+                        </constraints>
+                        <state key="normal" title="AR"/>
+                        <connections>
+                            <action selector="buttonAR:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="wK1-Jb-tjc"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AcW-fT-1kv">
+                        <rect key="frame" x="113" y="48" width="191" height="53"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="53" id="jJX-I8-R2V"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="mC8-aJ-x51" firstAttribute="top" secondItem="63C-uX-3Rq" secondAttribute="top" id="06H-Ns-6Hc"/>
+                    <constraint firstItem="AcW-fT-1kv" firstAttribute="top" secondItem="3gM-Vw-URY" secondAttribute="bottom" constant="8" id="GTA-Q0-MV4"/>
+                    <constraint firstItem="AcW-fT-1kv" firstAttribute="top" secondItem="mC8-aJ-x51" secondAttribute="bottom" constant="1" id="JHy-u5-Mr4"/>
+                    <constraint firstItem="3gM-Vw-URY" firstAttribute="trailing" secondItem="AcW-fT-1kv" secondAttribute="trailing" id="Nui-Y3-HdZ"/>
+                    <constraint firstItem="AcW-fT-1kv" firstAttribute="leading" secondItem="mC8-aJ-x51" secondAttribute="leading" id="YF1-Wm-vAL"/>
+                    <constraint firstItem="mC8-aJ-x51" firstAttribute="leading" secondItem="63C-uX-3Rq" secondAttribute="trailing" constant="8" id="c4g-1N-5pv"/>
+                    <constraint firstItem="3gM-Vw-URY" firstAttribute="leading" secondItem="mC8-aJ-x51" secondAttribute="trailing" constant="33" id="py1-4r-EnD"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="plantDescription" destination="AcW-fT-1kv" id="nGa-Va-fgC"/>
+                <outlet property="plantName" destination="mC8-aJ-x51" id="xLp-M5-Ov0"/>
+                <outlet property="plantPictureTableView" destination="63C-uX-3Rq" id="xwB-Zz-JDj"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="96.428571428571431"/>
+        </tableViewCell>
+    </objects>
+</document>

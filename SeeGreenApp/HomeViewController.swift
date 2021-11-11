@@ -35,6 +35,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableViewHome.dequeueReusableCell(withIdentifier: "cellTest")
         cell?.textLabel!.text = plantsContainer[indexPath.row].myName
+        var textWater = String(plantsContainer[indexPath.row].waterLevel)
+         cell?.detailTextLabel!.text = textWater
         
         return cell!
     }
