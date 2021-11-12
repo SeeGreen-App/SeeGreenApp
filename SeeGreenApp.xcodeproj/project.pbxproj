@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3F091ADF273B5C5E00C5EC73 /* plants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F091ADE273B5C5E00C5EC73 /* plants.swift */; };
 		3F091AE3273B746800C5EC73 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F091AE2273B746800C5EC73 /* TestViewController.swift */; };
+		3F650C24273F2E84002813BC /* RoundLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F650C23273F2E83002813BC /* RoundLabel.swift */; };
 		3F830179273CCCF1007B2160 /* Gaegu-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F830178273CCCEC007B2160 /* Gaegu-Regular.ttf */; };
 		3F83017B273CCDAF007B2160 /* LocalBreweryFour-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F83017A273CCD08007B2160 /* LocalBreweryFour-Regular.ttf */; };
 		3FF1C7672722270E0004F58D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1C7662722270E0004F58D /* AppDelegate.swift */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		3F091ADE273B5C5E00C5EC73 /* plants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = plants.swift; sourceTree = "<group>"; };
 		3F091AE2273B746800C5EC73 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		3F650C23273F2E83002813BC /* RoundLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundLabel.swift; sourceTree = "<group>"; };
 		3F830178273CCCEC007B2160 /* Gaegu-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gaegu-Regular.ttf"; sourceTree = "<group>"; };
 		3F83017A273CCD08007B2160 /* LocalBreweryFour-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LocalBreweryFour-Regular.ttf"; sourceTree = "<group>"; };
 		3FF1C7632722270E0004F58D /* SeeGreenApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeeGreenApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +76,7 @@
 				3FF1C7682722270E0004F58D /* SceneDelegate.swift */,
 				3FF1C76A2722270E0004F58D /* ViewController.swift */,
 				3FF1C76C2722270E0004F58D /* Main.storyboard */,
+				3F650C23273F2E83002813BC /* RoundLabel.swift */,
 				3F830178273CCCEC007B2160 /* Gaegu-Regular.ttf */,
 				3F83017A273CCD08007B2160 /* LocalBreweryFour-Regular.ttf */,
 				3FF1C76F272227100004F58D /* Assets.xcassets */,
@@ -161,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FF1C76B2722270E0004F58D /* ViewController.swift in Sources */,
+				3F650C24273F2E84002813BC /* RoundLabel.swift in Sources */,
 				3FF1C7672722270E0004F58D /* AppDelegate.swift in Sources */,
 				3F091AE3273B746800C5EC73 /* TestViewController.swift in Sources */,
 				3FF1C7692722270E0004F58D /* SceneDelegate.swift in Sources */,
