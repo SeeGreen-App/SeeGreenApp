@@ -18,8 +18,11 @@ class RoundLabel: UILabel {
        super.draw(rect)
        self.layer.masksToBounds = true
        self.layer.cornerRadius = self.bounds.height/2
-       //self.font = UIFont.system
+       }
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.font = UIFont(name: "Gaegu-Regular", size: self.font.pointSize)
     }
     
-
 }
+

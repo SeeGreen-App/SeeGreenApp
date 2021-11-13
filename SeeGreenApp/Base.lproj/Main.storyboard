@@ -36,7 +36,7 @@
                             <constraint firstItem="oNj-UP-R9S" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="2lg-vB-iam"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Collection" image="list.bullet.rectangle" catalog="system" id="jy4-oe-ou8"/>
+                    <tabBarItem key="tabBarItem" title="Collection" image="list.bullet.rectangle" catalog="system" selectedImage="catalogue-icon" id="jy4-oe-ou8"/>
                     <connections>
                         <outlet property="searchBar" destination="oNj-UP-R9S" id="T31-ZC-VqZ"/>
                     </connections>
@@ -86,11 +86,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SeeGreen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zka-Sw-6LZ" customClass="RoundLabel" customModule="SeeGreenApp" customModuleProvider="target">
-                                <rect key="frame" x="103" y="163" width="208" height="67"/>
+                                <rect key="frame" x="103" y="220" width="208" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.14117647059999999" green="0.4549019608" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Gaegu-Regular" family="Gaegu" pointSize="33"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="View All" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w5Y-gs-h32" customClass="RoundLabel" customModule="SeeGreenApp" customModuleProvider="target">
+                                <rect key="frame" x="94" y="155" width="226" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.14117647059999999" green="0.4549019608" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -151,7 +159,7 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="XOn-m7-y3Z" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ktk-bz-Akw">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ktk-bz-Akw" customClass="RoundedTabBar" customModule="SeeGreenApp" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -172,7 +180,13 @@
             <point key="canvasLocation" x="897" y="-299"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="ktk-bz-Akw">
+            <size key="intrinsicContentSize" width="-1" height="83"/>
+        </designable>
+    </designables>
     <resources>
+        <image name="catalogue-icon" width="170.66667175292969" height="170.66667175292969"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="leaf.fill" catalog="system" width="128" height="106"/>
         <image name="list.bullet.rectangle" catalog="system" width="128" height="93"/>

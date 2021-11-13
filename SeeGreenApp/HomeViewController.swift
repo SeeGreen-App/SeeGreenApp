@@ -19,6 +19,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableViewHome.delegate = self
         tableViewHome.dataSource = self
         // Do any additional setup after loading the view.
+//
+//            for family in UIFont.familyNames.sorted() {
+//            let names = UIFont.fontNames(forFamilyName: family)
+//            print("Family: \(family) Font names: \(names)")
+//        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
