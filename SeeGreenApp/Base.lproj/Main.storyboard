@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -36,7 +37,7 @@
                             <constraint firstItem="oNj-UP-R9S" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="2lg-vB-iam"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Collection" image="list.bullet.rectangle" catalog="system" selectedImage="catalogue-icon" id="jy4-oe-ou8"/>
+                    <tabBarItem key="tabBarItem" title="Collection" image="list.bullet.rectangle" catalog="system" id="jy4-oe-ou8"/>
                     <connections>
                         <outlet property="searchBar" destination="oNj-UP-R9S" id="T31-ZC-VqZ"/>
                     </connections>
@@ -85,27 +86,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SeeGreen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zka-Sw-6LZ" customClass="RoundLabel" customModule="SeeGreenApp" customModuleProvider="target">
-                                <rect key="frame" x="103" y="220" width="208" height="67"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.14117647059999999" green="0.4549019608" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Gaegu-Regular" family="Gaegu" pointSize="33"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="View All" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w5Y-gs-h32" customClass="RoundLabel" customModule="SeeGreenApp" customModuleProvider="target">
-                                <rect key="frame" x="94" y="155" width="226" height="21"/>
+                                <rect key="frame" x="166" y="151" width="98" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.14117647059999999" green="0.4549019608" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.1803921568627451" green="0.54509803921568623" blue="0.34114533660000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kyH-f3-zc5" customClass="RoundedView" customModule="SeeGreenApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="189" width="414" height="134"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4bE-tX-E6u"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="IYJ-FQ-wBp"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" selectedImage="home-icon-filled" id="IYJ-FQ-wBp"/>
                     <connections>
                         <outlet property="tableViewHome" destination="eDZ-Ll-n7y" id="oUP-1c-fgr"/>
                     </connections>
@@ -163,6 +161,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" name="Green"/>
+                        <color key="barTintColor" name="Green"/>
+                        <color key="selectedImageTintColor" name="Green"/>
                     </tabBar>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="selectedIndex">
@@ -186,10 +187,13 @@
         </designable>
     </designables>
     <resources>
-        <image name="catalogue-icon" width="170.66667175292969" height="170.66667175292969"/>
+        <image name="home-icon-filled" width="25" height="25"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="leaf.fill" catalog="system" width="128" height="106"/>
         <image name="list.bullet.rectangle" catalog="system" width="128" height="93"/>
+        <namedColor name="Green">
+            <color red="0.18039215689999999" green="0.5450980392" blue="0.34114533660000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
