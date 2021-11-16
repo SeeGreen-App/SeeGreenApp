@@ -7,27 +7,41 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
-
-    @IBOutlet weak var imageView: UIImageView!
-    
-    
+class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    @IBOutlet var tableViewHome: UITableView!
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        tableViewHome.reloadData()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        tableViewHome.delegate = self
+        tableViewHome.dataSource = self
+// Do any additional setup after loading the view.
+//
+//            for family in UIFont.familyNames.sorted() {
+//            let names = UIFont.fontNames(forFamilyName: family)
+//            print("Family: \(family) Font names: \(names)")
+//        }
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return plantsContainer.count
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableViewHome.dequeueReusableCell(withIdentifier: "cellTest")
+        cell?.textLabel!.text = plantsContainer[indexPath.row].myName
+        var textWater = String(plantsContainer[indexPath.row].waterLevel)
+         cell?.detailTextLabel!.text = textWater
+        
+        return cell!
     }
-    */
+    
+    
+
 
 }
