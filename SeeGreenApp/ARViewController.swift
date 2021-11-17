@@ -7,22 +7,9 @@
 
 import UIKit
 
-
 class ARViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var arTitle:String = ""
-    
-    var plantsArr = [
-        plantsDescription(setName: "Monsterra", setDescrip: "This is a monsterra plant, cool name!", setImg: UIImage(systemName: "pencil")!),
-        
-        plantsDescription(setName: "Basil", setDescrip: "This is a monsterra plant, cool name!", setImg: UIImage(systemName: "pencil")!),
-        
-        plantsDescription(setName: "Fern", setDescrip: "This is a monsterra plant, cool name!", setImg: UIImage(systemName: "pencil")!),
-        
-        plantsDescription(setName: "Orchid", setDescrip: "This is a monsterra plant, cool name!", setImg: UIImage(systemName: "pencil")!),
-        
-        plantsDescription(setName: "Succulent", setDescrip: "This is a monsterra plant, cool name!", setImg: UIImage(systemName: "pencil")!)
-    ]
+    var plantsArr = ["monsterra", "basil", "fern", "orchid", "succulent"]
     @IBOutlet var tableView: UITableView!
     
 
@@ -33,36 +20,31 @@ class ARViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(CatalogueTableViewCell.nib(), forCellReuseIdentifier: "CatalogueTableViewCell")
-        self.tableView.rowHeight = 100
-
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
-        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: CatalogueTableViewCell.identifier) as! CatalogueTableViewCell
-        cell.plantName.text! = plantsArr[indexPath.row].name
-        cell.plantDescription.text! = plantsArr[indexPath.row].description
-        cell.plantPictureTableView.image = plantsArr[indexPath.row].plantIcon
-        cell.delegate = self
-        return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellID")
+        cell?.textLabel!.text = plantsArr[indexPath.row]
+        //cell?.detailTextLabel?.text = plantsArr[indexPath.row].waterLevel
+        return cell!
         
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let indexPath = tableView.indexPathForSelectedRow
-        let currentCell = tableView.cellForRow(at: indexPath!)! as! CatalogueTableViewCell
+        let currentCell = tableView.cellForRow(at: indexPath!)! as UITableViewCell
         
-        let name:String = currentCell.plantName.text!
+        let name:String = currentCell.textLabel!.text!
         
         var nameOfPlant = "Unnamed"
+        
         switch name {
         
-        case "Monsterra":
+        case "monsterra":
             let messsage = UIAlertController(title: "", message: "What would you like to name your new plant?", preferredStyle: .alert)
             messsage.addTextField { UITextField in
                 UITextField.placeholder = "Type name here"
@@ -76,7 +58,7 @@ class ARViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
             }
             self.present(messsage, animated: true, completion: nil)
             
-        case "Basil":
+        case "basil":
             let messsage = UIAlertController(title: "", message: "What would you like to name your new plant?", preferredStyle: .alert)
             messsage.addTextField { UITextField in
                 UITextField.placeholder = "Type name here"
@@ -90,7 +72,7 @@ class ARViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
             }
             self.present(messsage, animated: true, completion: nil)
             
-        case "Fern":
+        case "fern":
             let messsage = UIAlertController(title: "", message: "What would you like to name your new plant?", preferredStyle: .alert)
             messsage.addTextField { UITextField in
                 UITextField.placeholder = "Type name here"
@@ -104,7 +86,7 @@ class ARViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
             }
             self.present(messsage, animated: true, completion: nil)
             
-        case "Orchid":
+        case "orchid":
             let messsage = UIAlertController(title: "", message: "What would you like to name your new plant?", preferredStyle: .alert)
             messsage.addTextField { UITextField in
                 UITextField.placeholder = "Type name here"
@@ -118,7 +100,7 @@ class ARViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
             }
             self.present(messsage, animated: true, completion: nil)
             
-        case "Succulent":
+        case "succulent":
             let messsage = UIAlertController(title: "", message: "What would you like to name your new plant?", preferredStyle: .alert)
             messsage.addTextField { UITextField in
                 UITextField.placeholder = "Type name here"
@@ -147,14 +129,4 @@ class ARViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
         return nil
     }
 
-}
-
-
-extension ARViewController: CatalogueTableViewCellDelegate {
-    
-    
-    func didTapButton(with title: String) {
-        print("\(title)")
-        arTitle = title
-    }
 }
