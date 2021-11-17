@@ -10,7 +10,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    let notificationPublisher  = NotificationPublisher()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -19,9 +19,7 @@ class ViewController: UIViewController {
             print("Family: \(family) Font names: \(names)")
         }
     }
-//    @IBAction func notificationBtn(_ sender: Any) {
-//        notificationPublisher.sendNotifications(title: "say hello", subtitle: "from Fay", body: "hello", badge: 1, delayInterval: 10)
-//    }
+    
     @IBAction func viewAllButton(_ sender: Any) {
     }
     
