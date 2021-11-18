@@ -50,7 +50,7 @@ import UIKit
         super.layoutSubviews()
         self.isTranslucent = true
         var tabFrame            = self.frame
-        tabFrame.size.height    = 65 + (UIApplication.shared.keyWindow?.safeAreaInsets.bottom ?? CGFloat.zero)
+        tabFrame.size.height    = 50 + (UIApplication.shared.keyWindow?.safeAreaInsets.bottom ?? CGFloat.zero)
         tabFrame.origin.y       = self.frame.origin.y +   ( self.frame.height - 65 - (UIApplication.shared.keyWindow?.safeAreaInsets.bottom ?? CGFloat.zero))
         self.layer.cornerRadius = 20
         self.frame            = tabFrame

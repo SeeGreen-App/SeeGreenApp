@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Collection-->
+        <!--Watering-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MapViewController" customModule="SeeGreenApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -28,7 +28,7 @@
                             <constraint firstItem="oNj-UP-R9S" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="2lg-vB-iam"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Collection" image="24x24" id="jy4-oe-ou8"/>
+                    <tabBarItem key="tabBarItem" title="Watering" image="48x48" id="jy4-oe-ou8"/>
                     <connections>
                         <outlet property="searchBar" destination="oNj-UP-R9S" id="T31-ZC-VqZ"/>
                     </connections>
@@ -67,7 +67,7 @@
                         <viewLayoutGuide key="safeArea" id="4bE-tX-E6u"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="IYJ-FQ-wBp"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="48x48-2" id="IYJ-FQ-wBp"/>
                     <connections>
                         <outlet property="tableViewHome" destination="eDZ-Ll-n7y" id="oUP-1c-fgr"/>
                     </connections>
@@ -127,7 +127,7 @@
                         <viewLayoutGuide key="safeArea" id="RoU-7e-4uO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Catalogue" image="leaf.fill" catalog="system" id="Xiw-hw-BIl"/>
+                    <tabBarItem key="tabBarItem" title="Catalogue" image="48x48-1" id="Xiw-hw-BIl"/>
                     <connections>
                         <outlet property="tableView" destination="QpT-Tj-f8C" id="vAs-Gy-4wm"/>
                     </connections>
@@ -159,10 +159,15 @@
             <point key="canvasLocation" x="897" y="-299"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="ktk-bz-Akw">
+            <size key="intrinsicContentSize" width="-1" height="49"/>
+        </designable>
+    </designables>
     <resources>
-        <image name="24x24" width="48" height="48"/>
-        <image name="house.fill" catalog="system" width="128" height="106"/>
-        <image name="leaf.fill" catalog="system" width="128" height="106"/>
+        <image name="48x48" width="48" height="48"/>
+        <image name="48x48-1" width="48" height="48"/>
+        <image name="48x48-2" width="48" height="48"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

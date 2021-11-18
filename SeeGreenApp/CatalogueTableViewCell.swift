@@ -31,10 +31,18 @@ class CatalogueTableViewCell: UITableViewCell {
         return UINib(nibName: "CatalogueTableViewCell", bundle: nil)
     }
     
+    override func draw(_ rect: CGRect) {
+        // Drawing code
+        super.draw(rect)
+        self.layer.masksToBounds = true
+        self.layer.cornerRadius = self.bounds.height/2
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+       // self.font = UIFont(name: "Gaegu-Regular", size: self.font.pointSize)
+        //self.textColor = UIColor.white
+        self.backgroundColor = UIColor(red: 0.00, green: 0.56, blue: 0.32, alpha: 1.00)
         // Initialization code
     }
 
