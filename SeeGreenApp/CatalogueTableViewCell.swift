@@ -40,9 +40,7 @@ class CatalogueTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-       // self.font = UIFont(name: "Gaegu-Regular", size: self.font.pointSize)
-        //self.textColor = UIColor.white
-        self.backgroundColor = UIColor(red: 0.00, green: 0.56, blue: 0.32, alpha: 1.00)
+        self.backgroundColor = UIColor(red: 0.08, green: 0.61, blue: 0.53, alpha: 1.00)
         // Initialization code
     }
 
@@ -50,6 +48,12 @@ class CatalogueTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    //sal will help us w/ padding on saturday, nov 20
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 100, left: 0, bottom: 100, right: 0))
     }
     
 }

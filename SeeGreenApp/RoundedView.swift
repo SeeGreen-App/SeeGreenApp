@@ -16,10 +16,10 @@ class RoundedView: UIView {
         // Drawing code
         super.draw(rect)
         self.layer.masksToBounds = true
-        self.layer.cornerRadius = self.bounds.height/2
+        self.layer.cornerRadius = 40
     }
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.backgroundColor = UIColor(red: 0.00, green: 0.56, blue: 0.32, alpha: 1.00)
+        self.backgroundColor = UIColor(red: 0.08, green: 0.61, blue: 0.53, alpha: 1.00)
     }
 }

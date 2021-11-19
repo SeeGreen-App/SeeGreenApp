@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Gaegu-Regular.ttf">
+            <string>Gaegu-Regular</string>
+        </array>
+        <array key="LocalBreweryFour-Regular.ttf">
+            <string>LocalBreweryFour-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -25,18 +35,29 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mC8-aJ-x51">
                         <rect key="frame" x="113" y="31" width="103" height="38"/>
                         <constraints>
+                            <constraint firstAttribute="width" constant="150" id="CBE-kf-kYZ"/>
                             <constraint firstAttribute="height" constant="38" id="Lli-5h-TOM"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                        <fontDescription key="fontDescription" name="LocalBreweryFour-Regular" family="Local Brewery" pointSize="35"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gM-Vw-URY">
                         <rect key="frame" x="249" y="9" width="55" height="41"/>
+                        <color key="backgroundColor" name="Pink"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="55" id="NTh-p1-Ys0"/>
                         </constraints>
-                        <state key="normal" title="AR"/>
+                        <fontDescription key="fontDescription" name="LocalBreweryFour-Regular" family="Local Brewery" pointSize="24"/>
+                        <state key="normal" title="Live">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <integer key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                         <connections>
                             <action selector="buttonAR:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="wK1-Jb-tjc"/>
                         </connections>
@@ -44,9 +65,10 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AcW-fT-1kv">
                         <rect key="frame" x="113" y="48" width="191" height="53"/>
                         <constraints>
+                            <constraint firstAttribute="width" constant="191" id="QYO-Jy-pnx"/>
                             <constraint firstAttribute="height" constant="53" id="jJX-I8-R2V"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <fontDescription key="fontDescription" name="Gaegu-Regular" family="Gaegu" pointSize="25"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -70,4 +92,9 @@
             <point key="canvasLocation" x="137.68115942028987" y="96.428571428571431"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <namedColor name="Pink">
+            <color red="0.89399999380111694" green="0.75700002908706665" blue="0.75700002908706665" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
 </document>
