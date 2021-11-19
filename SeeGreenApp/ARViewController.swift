@@ -13,15 +13,15 @@ class ARViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
     var arTitle:String = ""
     
     var plantsArr = [
-        plantsDescription(setName: "Monsterra", setDescrip: "This is a monsterra plant, cool name!", setImg: UIImage(systemName: "pencil")!),
+        plantsDescription(setName: "Monstera", setDescrip: "Aka the swiss cheese plant.", setImg: UIImage(systemName: "pencil")!),
         
-        plantsDescription(setName: "Basil", setDescrip: "This is a monsterra plant, cool name!", setImg: UIImage(systemName: "pencil")!),
+        plantsDescription(setName: "Basil", setDescrip: "Not just a garnish!", setImg: UIImage(systemName: "pencil")!),
         
-        plantsDescription(setName: "Fern", setDescrip: "This is a monsterra plant, cool name!", setImg: UIImage(systemName: "pencil")!),
+        plantsDescription(setName: "Fern", setDescrip: "No tanning sessions for this plant!", setImg: UIImage(systemName: "pencil")!),
         
-        plantsDescription(setName: "Orchid", setDescrip: "This is a monsterra plant, cool name!", setImg: UIImage(systemName: "pencil")!),
+        plantsDescription(setName: "Orchid", setDescrip: "Also a symbol for love...", setImg: UIImage(systemName: "pencil")!),
         
-        plantsDescription(setName: "Succulent", setDescrip: "This is a monsterra plant, cool name!", setImg: UIImage(systemName: "pencil")!)
+        plantsDescription(setName: "Jade", setDescrip: "Like a mini-tree!", setImg: UIImage(systemName: "pencil")!)
     ]
     @IBOutlet var tableView: UITableView!
     
@@ -34,8 +34,7 @@ class ARViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(CatalogueTableViewCell.nib(), forCellReuseIdentifier: "CatalogueTableViewCell")
-        self.tableView.rowHeight = 100
-
+        self.tableView.rowHeight = 125
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -62,14 +61,14 @@ class ARViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
         var nameOfPlant = "Unnamed"
         switch name {
         
-        case "Monsterra":
+        case "Monstera":
             let messsage = UIAlertController(title: "", message: "What would you like to name your new plant?", preferredStyle: .alert)
             messsage.addTextField { UITextField in
                 UITextField.placeholder = "Type name here"
                 
                 let add = UIAlertAction(title: "OK", style: .default) { alert in
                     nameOfPlant = (messsage.textFields?.first!.text)!
-                    plantsContainer.append(Plants(imageSet: UIImage(systemName: "pencil")!, typeName: "Monsterra", nickName: nameOfPlant, wateringFrequency: 10))
+                    plantsContainer.append(Plants(imageSet: UIImage(systemName: "pencil")!, typeName: "Monstera", nickName: nameOfPlant, wateringFrequency: 10))
                 }
                 messsage.addAction(add)
 
@@ -118,14 +117,14 @@ class ARViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
             }
             self.present(messsage, animated: true, completion: nil)
             
-        case "Succulent":
+        case "Jade":
             let messsage = UIAlertController(title: "", message: "What would you like to name your new plant?", preferredStyle: .alert)
             messsage.addTextField { UITextField in
                 UITextField.placeholder = "Type name here"
                 
                 let add = UIAlertAction(title: "OK", style: .default) { alert in
                     nameOfPlant = (messsage.textFields?.first!.text)!
-                    plantsContainer.append(Plants(imageSet: UIImage(systemName: "pencil")!, typeName: "Succulent", nickName: nameOfPlant, wateringFrequency: 10))
+                    plantsContainer.append(Plants(imageSet: UIImage(systemName: "pencil")!, typeName: "Jade", nickName: nameOfPlant, wateringFrequency: 10))
                 }
                 messsage.addAction(add)
 

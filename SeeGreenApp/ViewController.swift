@@ -14,10 +14,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        for family in UIFont.familyNames.sorted() {
-            let names = UIFont.fontNames(forFamilyName: family)
-            print("Family: \(family) Font names: \(names)")
-        }
     }
 //    @IBAction func notificationBtn(_ sender: Any) {
 //        notificationPublisher.sendNotifications(title: "say hello", subtitle: "from Fay", body: "hello", badge: 1, delayInterval: 10)

@@ -35,7 +35,7 @@ class CatalogueTableViewCell: UITableViewCell {
         // Drawing code
         super.draw(rect)
         self.layer.masksToBounds = true
-        self.layer.cornerRadius = self.bounds.height/2
+        self.layer.cornerRadius = 40
     }
     
     override func awakeFromNib() {
@@ -46,7 +46,7 @@ class CatalogueTableViewCell: UITableViewCell {
     //sal will help us w/ padding on saturday, nov 20
     override func layoutSubviews() {
         super.layoutSubviews()
-        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 100, left: 10, bottom: 100, right: 10))
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10))
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

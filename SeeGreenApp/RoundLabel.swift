@@ -22,8 +22,9 @@ class RoundLabel: UILabel {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.font = UIFont(name: "Gaegu-Regular", size: self.font.pointSize)
+        //self.font = UIFont(name: "Gaegu-Regular", size: self.font.pointSize)
         self.textColor = UIColor.white
+        self.backgroundColor = UIColor(red: 0.92, green: 0.75, blue: 0.75, alpha: 1.00)
 
     }
     
