@@ -41,7 +41,12 @@ class CatalogueTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.backgroundColor = UIColor(red: 0.08, green: 0.61, blue: 0.53, alpha: 1.00)
-        // Initialization code
+    }
+    
+    //sal will help us w/ padding on saturday, nov 20
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 100, left: 10, bottom: 100, right: 10))
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -49,13 +54,6 @@ class CatalogueTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
-    //sal will help us w/ padding on saturday, nov 20
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 100, left: 0, bottom: 100, right: 0))
-    }
-    
 }
 
 
