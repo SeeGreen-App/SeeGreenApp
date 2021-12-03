@@ -17,6 +17,9 @@
 		3F880ECC27444AB2008AE5F4 /* NotificationPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F880ECB27444AB2008AE5F4 /* NotificationPublisher.swift */; };
 		3FD6332D273DB21F00F1EEA4 /* CatalogueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD6332B273DB21F00F1EEA4 /* CatalogueTableViewCell.swift */; };
 		3FD6332E273DB21F00F1EEA4 /* CatalogueTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FD6332C273DB21F00F1EEA4 /* CatalogueTableViewCell.xib */; };
+		3FD9855F2759A177004F6D05 /* WateringTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD9855D2759A177004F6D05 /* WateringTableViewCell.swift */; };
+		3FD985602759A177004F6D05 /* WateringTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FD9855E2759A177004F6D05 /* WateringTableViewCell.xib */; };
+		3FD985622759A21F004F6D05 /* WateringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD985612759A21F004F6D05 /* WateringViewController.swift */; };
 		3FF1C7672722270E0004F58D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1C7662722270E0004F58D /* AppDelegate.swift */; };
 		3FF1C7692722270E0004F58D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1C7682722270E0004F58D /* SceneDelegate.swift */; };
 		3FF1C76B2722270E0004F58D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1C76A2722270E0004F58D /* ViewController.swift */; };
@@ -40,6 +43,9 @@
 		3F880ECE27444B4E008AE5F4 /* SeeGreenApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SeeGreenApp.entitlements; sourceTree = "<group>"; };
 		3FD6332B273DB21F00F1EEA4 /* CatalogueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueTableViewCell.swift; sourceTree = "<group>"; };
 		3FD6332C273DB21F00F1EEA4 /* CatalogueTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatalogueTableViewCell.xib; sourceTree = "<group>"; };
+		3FD9855D2759A177004F6D05 /* WateringTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WateringTableViewCell.swift; sourceTree = "<group>"; };
+		3FD9855E2759A177004F6D05 /* WateringTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WateringTableViewCell.xib; sourceTree = "<group>"; };
+		3FD985612759A21F004F6D05 /* WateringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WateringViewController.swift; sourceTree = "<group>"; };
 		3FF1C7632722270E0004F58D /* SeeGreenApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeeGreenApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FF1C7662722270E0004F58D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FF1C7682722270E0004F58D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,7 +103,10 @@
 				3FF1C76F272227100004F58D /* Assets.xcassets */,
 				3FF1C771272227100004F58D /* LaunchScreen.storyboard */,
 				3FF1C774272227100004F58D /* Info.plist */,
+				3FD9855D2759A177004F6D05 /* WateringTableViewCell.swift */,
+				3FD9855E2759A177004F6D05 /* WateringTableViewCell.xib */,
 				EEB9D65F27279E7400E9643F /* MapViewController.swift */,
+				3FD985612759A21F004F6D05 /* WateringViewController.swift */,
 				EEB9D66127279E8400E9643F /* ARViewController.swift */,
 				EEB9D66327279E9A00E9643F /* HomeViewController.swift */,
 				3F091ADE273B5C5E00C5EC73 /* plants.swift */,
@@ -169,6 +178,7 @@
 				3F830179273CCCF1007B2160 /* Gaegu-Regular.ttf in Resources */,
 				3FF1C770272227100004F58D /* Assets.xcassets in Resources */,
 				3FF1C76E2722270E0004F58D /* Main.storyboard in Resources */,
+				3FD985602759A177004F6D05 /* WateringTableViewCell.xib in Resources */,
 				3F83017B273CCDAF007B2160 /* LocalBreweryFour-Regular.ttf in Resources */,
 				3FD6332E273DB21F00F1EEA4 /* CatalogueTableViewCell.xib in Resources */,
 			);
@@ -185,11 +195,13 @@
 				3F650C26273F3765002813BC /* RoundedTabBar.swift in Sources */,
 				3F880ECC27444AB2008AE5F4 /* NotificationPublisher.swift in Sources */,
 				3F650C24273F2E84002813BC /* RoundLabel.swift in Sources */,
+				3FD9855F2759A177004F6D05 /* WateringTableViewCell.swift in Sources */,
 				3FF1C7672722270E0004F58D /* AppDelegate.swift in Sources */,
 				3FD6332D273DB21F00F1EEA4 /* CatalogueTableViewCell.swift in Sources */,
 				3F091AE3273B746800C5EC73 /* TestViewController.swift in Sources */,
 				3FF1C7692722270E0004F58D /* SceneDelegate.swift in Sources */,
 				3F091ADF273B5C5E00C5EC73 /* plants.swift in Sources */,
+				3FD985622759A21F004F6D05 /* WateringViewController.swift in Sources */,
 				EEB9D66027279E7400E9643F /* MapViewController.swift in Sources */,
 				EEB9D66227279E8400E9643F /* ARViewController.swift in Sources */,
 				3F650C28273F3EA3002813BC /* RoundedView.swift in Sources */,

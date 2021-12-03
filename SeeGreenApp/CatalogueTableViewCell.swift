@@ -31,22 +31,16 @@ class CatalogueTableViewCell: UITableViewCell {
         return UINib(nibName: "CatalogueTableViewCell", bundle: nil)
     }
     
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-        super.draw(rect)
-        self.layer.masksToBounds = true
-        self.layer.cornerRadius = 40
-    }
+//    override func draw(_ rect: CGRect) {
+//        // Drawing code
+//        super.draw(rect)
+//        self.layer.masksToBounds = true
+//        self.layer.cornerRadius = 40
+//    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.backgroundColor = UIColor(red: 0.08, green: 0.61, blue: 0.53, alpha: 1.00)
-    }
-    
-    //sal will help us w/ padding on saturday, nov 20
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10))
+//        self.backgroundColor = UIColor(red: 0.08, green: 0.61, blue: 0.53, alpha: 1.00)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
