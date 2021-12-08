@@ -8,15 +8,15 @@
 import Foundation
 import UIKit
 
-class Plants {
-    init (imageSet:UIImage, typeName:String, nickName:String, wateringFrequency: Int) {
+class Plants: Codable {
+    init (imageSet:String, typeName:String, nickName:String, wateringFrequency: Int) {
         image = imageSet
         name = typeName
         myName = nickName
         wateringNeed = wateringFrequency
         
     }
-    var image:UIImage!
+    var image:String = "nil"
     var waterLevel = 100;
     var name = "none"
     var myName = "none"

@@ -7,7 +7,8 @@
 
 import UIKit
 import UserNotifications
-
+import Firebase
+import FirebaseStorage
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -30,6 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         requestNotificationAuthorization(applicaiton: application)
         registerForPushNotifications()
+        FirebaseApp.configure()
         return true
     }
 

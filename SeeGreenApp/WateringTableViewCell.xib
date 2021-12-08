@@ -55,6 +55,11 @@
                 </subviews>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="plantImage" destination="7Cu-UD-ws6" id="j2E-Re-jfo"/>
+                <outlet property="plantName" destination="ANj-ev-Mlx" id="rt4-V4-MGK"/>
+                <outlet property="plantType" destination="0RQ-hS-G1m" id="xDU-0q-WQM"/>
+            </connections>
             <point key="canvasLocation" x="170.28985507246378" y="99.107142857142847"/>
         </tableViewCell>
     </objects>

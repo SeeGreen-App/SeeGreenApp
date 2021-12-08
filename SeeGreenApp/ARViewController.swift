@@ -68,7 +68,9 @@ class ARViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
                 
                 let add = UIAlertAction(title: "OK", style: .default) { alert in
                     nameOfPlant = (messsage.textFields?.first!.text)!
-                    plantsContainer.append(Plants(imageSet: UIImage(systemName: "pencil")!, typeName: "Monstera", nickName: nameOfPlant, wateringFrequency: 10))
+                    plantsContainer.append(Plants(imageSet: "Monstera", typeName: "Monstera", nickName: nameOfPlant, wateringFrequency: 10))
+                    LocalStorage.saveToFile(plantsList: plantsContainer)
+                    //print(plantsContainer)
                 }
                 messsage.addAction(add)
 
@@ -82,7 +84,8 @@ class ARViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
                 
                 let add = UIAlertAction(title: "OK", style: .default) { alert in
                     nameOfPlant = (messsage.textFields?.first!.text)!
-                    plantsContainer.append(Plants(imageSet: UIImage(systemName: "pencil")!, typeName: "Basil", nickName: nameOfPlant, wateringFrequency: 10))
+                    plantsContainer.append(Plants(imageSet: "Fern", typeName: "Basil", nickName: nameOfPlant, wateringFrequency: 10))
+                    LocalStorage.saveToFile(plantsList: plantsContainer)
                 }
                 messsage.addAction(add)
 
@@ -96,7 +99,8 @@ class ARViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
                 
                 let add = UIAlertAction(title: "OK", style: .default) { alert in
                     nameOfPlant = (messsage.textFields?.first!.text)!
-                    plantsContainer.append(Plants(imageSet: UIImage(systemName: "pencil")!, typeName: "Fern", nickName: nameOfPlant, wateringFrequency: 10))
+                    plantsContainer.append(Plants(imageSet: "Fern", typeName: "Fern", nickName: nameOfPlant, wateringFrequency: 10))
+                    LocalStorage.saveToFile(plantsList: plantsContainer)
                 }
                 messsage.addAction(add)
 
@@ -110,7 +114,8 @@ class ARViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
                 
                 let add = UIAlertAction(title: "OK", style: .default) { alert in
                     nameOfPlant = (messsage.textFields?.first!.text)!
-                    plantsContainer.append(Plants(imageSet: UIImage(systemName: "pencil")!, typeName: "Orchid", nickName: nameOfPlant, wateringFrequency: 10))
+                    plantsContainer.append(Plants(imageSet: "Orchid", typeName: "Orchid", nickName: nameOfPlant, wateringFrequency: 10))
+                    LocalStorage.saveToFile(plantsList: plantsContainer)
                 }
                 messsage.addAction(add)
 
@@ -124,7 +129,8 @@ class ARViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
                 
                 let add = UIAlertAction(title: "OK", style: .default) { alert in
                     nameOfPlant = (messsage.textFields?.first!.text)!
-                    plantsContainer.append(Plants(imageSet: UIImage(systemName: "pencil")!, typeName: "Jade", nickName: nameOfPlant, wateringFrequency: 10))
+                    plantsContainer.append(Plants(imageSet: "Jade", typeName: "Jade", nickName: nameOfPlant, wateringFrequency: 10))
+                    LocalStorage.saveToFile(plantsList: plantsContainer)
                 }
                 messsage.addAction(add)
 

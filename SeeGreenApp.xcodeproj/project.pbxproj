@@ -3,12 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		3F091ADF273B5C5E00C5EC73 /* plants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F091ADE273B5C5E00C5EC73 /* plants.swift */; };
 		3F091AE3273B746800C5EC73 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F091AE2273B746800C5EC73 /* TestViewController.swift */; };
+		3F2FE45E275EC97000062FD6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FE45D275EC97000062FD6 /* GoogleService-Info.plist */; };
+		3F2FE460276059EB00062FD6 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2FE45F276059EB00062FD6 /* LocalStorage.swift */; };
 		3F650C24273F2E84002813BC /* RoundLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F650C23273F2E83002813BC /* RoundLabel.swift */; };
 		3F650C26273F3765002813BC /* RoundedTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F650C25273F3765002813BC /* RoundedTabBar.swift */; };
 		3F650C28273F3EA3002813BC /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F650C27273F3EA3002813BC /* RoundedView.swift */; };
@@ -26,6 +28,7 @@
 		3FF1C76E2722270E0004F58D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FF1C76C2722270E0004F58D /* Main.storyboard */; };
 		3FF1C770272227100004F58D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FF1C76F272227100004F58D /* Assets.xcassets */; };
 		3FF1C773272227100004F58D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FF1C771272227100004F58D /* LaunchScreen.storyboard */; };
+		7B953503E314AF5BBDAF2C5D /* Pods_SeeGreenApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D18AAC31C31EEF13F1D536D0 /* Pods_SeeGreenApp.framework */; };
 		EEB9D66027279E7400E9643F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB9D65F27279E7400E9643F /* MapViewController.swift */; };
 		EEB9D66227279E8400E9643F /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB9D66127279E8400E9643F /* ARViewController.swift */; };
 		EEB9D66427279E9A00E9643F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB9D66327279E9A00E9643F /* HomeViewController.swift */; };
@@ -34,6 +37,8 @@
 /* Begin PBXFileReference section */
 		3F091ADE273B5C5E00C5EC73 /* plants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = plants.swift; sourceTree = "<group>"; };
 		3F091AE2273B746800C5EC73 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		3F2FE45D275EC97000062FD6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3F2FE45F276059EB00062FD6 /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
 		3F650C23273F2E83002813BC /* RoundLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundLabel.swift; sourceTree = "<group>"; };
 		3F650C25273F3765002813BC /* RoundedTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTabBar.swift; sourceTree = "<group>"; };
 		3F650C27273F3EA3002813BC /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
@@ -54,6 +59,9 @@
 		3FF1C76F272227100004F58D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FF1C772272227100004F58D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3FF1C774272227100004F58D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5D4A4F89302A70B63A0E27F /* Pods-SeeGreenApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeeGreenApp.release.xcconfig"; path = "Target Support Files/Pods-SeeGreenApp/Pods-SeeGreenApp.release.xcconfig"; sourceTree = "<group>"; };
+		B9EB1DCFD550F70DA6005CA4 /* Pods-SeeGreenApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeeGreenApp.debug.xcconfig"; path = "Target Support Files/Pods-SeeGreenApp/Pods-SeeGreenApp.debug.xcconfig"; sourceTree = "<group>"; };
+		D18AAC31C31EEF13F1D536D0 /* Pods_SeeGreenApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SeeGreenApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEB9D65F27279E7400E9643F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		EEB9D66127279E8400E9643F /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		EEB9D66327279E9A00E9643F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B953503E314AF5BBDAF2C5D /* Pods_SeeGreenApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +84,8 @@
 			children = (
 				3FF1C7652722270E0004F58D /* SeeGreenApp */,
 				3FF1C7642722270E0004F58D /* Products */,
+				CF59109D8070269A8A27EFA8 /* Pods */,
+				B630E2AE9ECE670607EE5A23 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,12 +120,31 @@
 				3FD985612759A21F004F6D05 /* WateringViewController.swift */,
 				EEB9D66127279E8400E9643F /* ARViewController.swift */,
 				EEB9D66327279E9A00E9643F /* HomeViewController.swift */,
+				3F2FE45F276059EB00062FD6 /* LocalStorage.swift */,
 				3F091ADE273B5C5E00C5EC73 /* plants.swift */,
 				3F091AE2273B746800C5EC73 /* TestViewController.swift */,
 				3FD6332B273DB21F00F1EEA4 /* CatalogueTableViewCell.swift */,
 				3FD6332C273DB21F00F1EEA4 /* CatalogueTableViewCell.xib */,
+				3F2FE45D275EC97000062FD6 /* GoogleService-Info.plist */,
 			);
 			path = SeeGreenApp;
+			sourceTree = "<group>";
+		};
+		B630E2AE9ECE670607EE5A23 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D18AAC31C31EEF13F1D536D0 /* Pods_SeeGreenApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CF59109D8070269A8A27EFA8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B9EB1DCFD550F70DA6005CA4 /* Pods-SeeGreenApp.debug.xcconfig */,
+				B5D4A4F89302A70B63A0E27F /* Pods-SeeGreenApp.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,9 +154,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3FF1C777272227100004F58D /* Build configuration list for PBXNativeTarget "SeeGreenApp" */;
 			buildPhases = (
+				8F5816C98D4D089FD28262DE /* [CP] Check Pods Manifest.lock */,
 				3FF1C75F2722270E0004F58D /* Sources */,
 				3FF1C7602722270E0004F58D /* Frameworks */,
 				3FF1C7612722270E0004F58D /* Resources */,
+				29CD360898574DCA1F9274C7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -175,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FF1C773272227100004F58D /* LaunchScreen.storyboard in Resources */,
+				3F2FE45E275EC97000062FD6 /* GoogleService-Info.plist in Resources */,
 				3F830179273CCCF1007B2160 /* Gaegu-Regular.ttf in Resources */,
 				3FF1C770272227100004F58D /* Assets.xcassets in Resources */,
 				3FF1C76E2722270E0004F58D /* Main.storyboard in Resources */,
@@ -185,6 +218,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		29CD360898574DCA1F9274C7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SeeGreenApp/Pods-SeeGreenApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SeeGreenApp/Pods-SeeGreenApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SeeGreenApp/Pods-SeeGreenApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F5816C98D4D089FD28262DE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SeeGreenApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3FF1C75F2722270E0004F58D /* Sources */ = {
@@ -204,6 +279,7 @@
 				3FD985622759A21F004F6D05 /* WateringViewController.swift in Sources */,
 				EEB9D66027279E7400E9643F /* MapViewController.swift in Sources */,
 				EEB9D66227279E8400E9643F /* ARViewController.swift in Sources */,
+				3F2FE460276059EB00062FD6 /* LocalStorage.swift in Sources */,
 				3F650C28273F3EA3002813BC /* RoundedView.swift in Sources */,
 				EEB9D66427279E9A00E9643F /* HomeViewController.swift in Sources */,
 			);
@@ -349,6 +425,7 @@
 		};
 		3FF1C778272227100004F58D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9EB1DCFD550F70DA6005CA4 /* Pods-SeeGreenApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -368,6 +445,7 @@
 		};
 		3FF1C779272227100004F58D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5D4A4F89302A70B63A0E27F /* Pods-SeeGreenApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
