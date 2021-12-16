@@ -18,6 +18,7 @@
 		3F83017B273CCDAF007B2160 /* LocalBreweryFour-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F83017A273CCD08007B2160 /* LocalBreweryFour-Regular.ttf */; };
 		3F880ECC27444AB2008AE5F4 /* NotificationPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F880ECB27444AB2008AE5F4 /* NotificationPublisher.swift */; };
 		3FA1A601276ABB2300DAE8FB /* NotificationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA1A600276ABB2300DAE8FB /* NotificationCollectionViewCell.swift */; };
+		3FA1A603276ABDCB00DAE8FB /* ARDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA1A602276ABDCB00DAE8FB /* ARDetailViewController.swift */; };
 		3FD6332D273DB21F00F1EEA4 /* CatalogueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD6332B273DB21F00F1EEA4 /* CatalogueTableViewCell.swift */; };
 		3FD6332E273DB21F00F1EEA4 /* CatalogueTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FD6332C273DB21F00F1EEA4 /* CatalogueTableViewCell.xib */; };
 		3FD9855F2759A177004F6D05 /* WateringTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD9855D2759A177004F6D05 /* WateringTableViewCell.swift */; };
@@ -48,6 +49,7 @@
 		3F880ECB27444AB2008AE5F4 /* NotificationPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPublisher.swift; sourceTree = "<group>"; };
 		3F880ECE27444B4E008AE5F4 /* SeeGreenApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SeeGreenApp.entitlements; sourceTree = "<group>"; };
 		3FA1A600276ABB2300DAE8FB /* NotificationCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCollectionViewCell.swift; sourceTree = "<group>"; };
+		3FA1A602276ABDCB00DAE8FB /* ARDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARDetailViewController.swift; sourceTree = "<group>"; };
 		3FD6332B273DB21F00F1EEA4 /* CatalogueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueTableViewCell.swift; sourceTree = "<group>"; };
 		3FD6332C273DB21F00F1EEA4 /* CatalogueTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatalogueTableViewCell.xib; sourceTree = "<group>"; };
 		3FD9855D2759A177004F6D05 /* WateringTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WateringTableViewCell.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				3FF1C76C2722270E0004F58D /* Main.storyboard */,
 				3F880ECB27444AB2008AE5F4 /* NotificationPublisher.swift */,
 				3F650C27273F3EA3002813BC /* RoundedView.swift */,
+				3FA1A602276ABDCB00DAE8FB /* ARDetailViewController.swift */,
 				3F650C23273F2E83002813BC /* RoundLabel.swift */,
 				3F650C25273F3765002813BC /* RoundedTabBar.swift */,
 				3F830178273CCCEC007B2160 /* Gaegu-Regular.ttf */,
@@ -273,6 +276,7 @@
 				3F650C26273F3765002813BC /* RoundedTabBar.swift in Sources */,
 				3F880ECC27444AB2008AE5F4 /* NotificationPublisher.swift in Sources */,
 				3F650C24273F2E84002813BC /* RoundLabel.swift in Sources */,
+				3FA1A603276ABDCB00DAE8FB /* ARDetailViewController.swift in Sources */,
 				3FD9855F2759A177004F6D05 /* WateringTableViewCell.swift in Sources */,
 				3FF1C7672722270E0004F58D /* AppDelegate.swift in Sources */,
 				3FD6332D273DB21F00F1EEA4 /* CatalogueTableViewCell.swift in Sources */,
