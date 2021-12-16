@@ -17,6 +17,7 @@
 		3F830179273CCCF1007B2160 /* Gaegu-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F830178273CCCEC007B2160 /* Gaegu-Regular.ttf */; };
 		3F83017B273CCDAF007B2160 /* LocalBreweryFour-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F83017A273CCD08007B2160 /* LocalBreweryFour-Regular.ttf */; };
 		3F880ECC27444AB2008AE5F4 /* NotificationPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F880ECB27444AB2008AE5F4 /* NotificationPublisher.swift */; };
+		3FA1A601276ABB2300DAE8FB /* NotificationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA1A600276ABB2300DAE8FB /* NotificationCollectionViewCell.swift */; };
 		3FD6332D273DB21F00F1EEA4 /* CatalogueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD6332B273DB21F00F1EEA4 /* CatalogueTableViewCell.swift */; };
 		3FD6332E273DB21F00F1EEA4 /* CatalogueTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FD6332C273DB21F00F1EEA4 /* CatalogueTableViewCell.xib */; };
 		3FD9855F2759A177004F6D05 /* WateringTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD9855D2759A177004F6D05 /* WateringTableViewCell.swift */; };
@@ -46,6 +47,7 @@
 		3F83017A273CCD08007B2160 /* LocalBreweryFour-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LocalBreweryFour-Regular.ttf"; sourceTree = "<group>"; };
 		3F880ECB27444AB2008AE5F4 /* NotificationPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPublisher.swift; sourceTree = "<group>"; };
 		3F880ECE27444B4E008AE5F4 /* SeeGreenApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SeeGreenApp.entitlements; sourceTree = "<group>"; };
+		3FA1A600276ABB2300DAE8FB /* NotificationCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCollectionViewCell.swift; sourceTree = "<group>"; };
 		3FD6332B273DB21F00F1EEA4 /* CatalogueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueTableViewCell.swift; sourceTree = "<group>"; };
 		3FD6332C273DB21F00F1EEA4 /* CatalogueTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatalogueTableViewCell.xib; sourceTree = "<group>"; };
 		3FD9855D2759A177004F6D05 /* WateringTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WateringTableViewCell.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 		3FF1C7652722270E0004F58D /* SeeGreenApp */ = {
 			isa = PBXGroup;
 			children = (
+				3FA1A600276ABB2300DAE8FB /* NotificationCollectionViewCell.swift */,
 				3F880ECE27444B4E008AE5F4 /* SeeGreenApp.entitlements */,
 				3FF1C7662722270E0004F58D /* AppDelegate.swift */,
 				3FF1C7682722270E0004F58D /* SceneDelegate.swift */,
@@ -273,6 +276,7 @@
 				3FD9855F2759A177004F6D05 /* WateringTableViewCell.swift in Sources */,
 				3FF1C7672722270E0004F58D /* AppDelegate.swift in Sources */,
 				3FD6332D273DB21F00F1EEA4 /* CatalogueTableViewCell.swift in Sources */,
+				3FA1A601276ABB2300DAE8FB /* NotificationCollectionViewCell.swift in Sources */,
 				3F091AE3273B746800C5EC73 /* TestViewController.swift in Sources */,
 				3FF1C7692722270E0004F58D /* SceneDelegate.swift in Sources */,
 				3F091ADF273B5C5E00C5EC73 /* plants.swift in Sources */,

@@ -13,15 +13,15 @@ class ARViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
     var arTitle:String = ""
     
     var plantsArr = [
-        plantsDescription(setName: "Monstera", setDescrip: "Aka the swiss cheese plant.", setImg: UIImage(systemName: "pencil")!),
+        plantsDescription(setName: "Monstera", setDescrip: "Aka the swiss cheese plant.", setImg: UIImage(systemName: "pencil")!, setCareTips: "Easiest to take care off, great starter plant", setWateringFreqText: "Infrequent", setResolveText: "Hardy plant, won't need to water often"),
         
-        plantsDescription(setName: "Basil", setDescrip: "Not just a garnish!", setImg: UIImage(systemName: "pencil")!),
+        plantsDescription(setName: "Basil", setDescrip: "Not just a garnish!", setImg: UIImage(systemName: "pencil")!, setCareTips: "fickle, can't store much water", setWateringFreqText: "freqeunt", setResolveText: "Can moderately withstand dry periods"),
         
-        plantsDescription(setName: "Fern", setDescrip: "No tanning sessions for this plant!", setImg: UIImage(systemName: "pencil")!),
+        plantsDescription(setName: "Fern", setDescrip: "No tanning sessions for this plant!", setImg: UIImage(systemName: "pencil")!, setCareTips: "It's almost as easy as the Monstera!", setWateringFreqText: "Semi-frequent", setResolveText: "moderately resistant"),
         
-        plantsDescription(setName: "Orchid", setDescrip: "Also a symbol for love...", setImg: UIImage(systemName: "pencil")!),
+        plantsDescription(setName: "Orchid", setDescrip: "Also a symbol for love...", setImg: UIImage(systemName: "pencil")!, setCareTips: "Needs a lot of water and direct sunlight!", setWateringFreqText: "Water this one frequently", setResolveText: "Although resistant, need to water frequently"),
         
-        plantsDescription(setName: "Jade", setDescrip: "Like a mini-tree!", setImg: UIImage(systemName: "pencil")!)
+        plantsDescription(setName: "Jade", setDescrip: "Like a mini-tree!", setImg: UIImage(systemName: "pencil")!, setCareTips: "Water this one infrequently! Hardy plant but not alot of health", setWateringFreqText: "infrequent", setResolveText: "High resolve")
     ]
     @IBOutlet var tableView: UITableView!
     
@@ -43,123 +43,30 @@ class ARViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: CatalogueTableViewCell.identifier) as! CatalogueTableViewCell
-        cell.plantName.text! = plantsArr[indexPath.row].name
-        cell.plantDescription.text! = plantsArr[indexPath.row].description
-        cell.plantPictureTableView.image = plantsArr[indexPath.row].plantIcon
-        cell.delegate = self
+        let cell = tableView.dequeueReusableCell(withIdentifier: "catalogueCell", for: indexPath)
+        cell.selectionStyle = .none
+        cell.textLabel!.text = plantsArr[indexPath.row].name
+        cell.detailTextLabel?.text = plantsArr[indexPath.row].description
         return cell
-        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let indexPath = tableView.indexPathForSelectedRow
-        let currentCell = tableView.cellForRow(at: indexPath!)! as! CatalogueTableViewCell
-        
-        let name:String = currentCell.plantName.text!
-        
-        var nameOfPlant = "Unnamed"
-        switch name {
-        
-        case "Monstera":
-            let messsage = UIAlertController(title: "", message: "What would you like to name your new plant?", preferredStyle: .alert)
-            messsage.addTextField { UITextField in
-                UITextField.placeholder = "Type name here"
-                
-                let add = UIAlertAction(title: "OK", style: .default) { alert in
-                    nameOfPlant = (messsage.textFields?.first!.text)!
-                    plantsContainer.append(Plants(imageSet: "Monstera", typeName: "Monstera", nickName: nameOfPlant, wateringFrequency: 10))
-                    LocalStorage.saveToFile(plantsList: plantsContainer)
-                    //print(plantsContainer)
-                }
-                messsage.addAction(add)
-
-            }
-            self.present(messsage, animated: true, completion: nil)
-            
-        case "Basil":
-            let messsage = UIAlertController(title: "", message: "What would you like to name your new plant?", preferredStyle: .alert)
-            messsage.addTextField { UITextField in
-                UITextField.placeholder = "Type name here"
-                
-                let add = UIAlertAction(title: "OK", style: .default) { alert in
-                    nameOfPlant = (messsage.textFields?.first!.text)!
-                    plantsContainer.append(Plants(imageSet: "Fern", typeName: "Basil", nickName: nameOfPlant, wateringFrequency: 10))
-                    LocalStorage.saveToFile(plantsList: plantsContainer)
-                }
-                messsage.addAction(add)
-
-            }
-            self.present(messsage, animated: true, completion: nil)
-            
-        case "Fern":
-            let messsage = UIAlertController(title: "", message: "What would you like to name your new plant?", preferredStyle: .alert)
-            messsage.addTextField { UITextField in
-                UITextField.placeholder = "Type name here"
-                
-                let add = UIAlertAction(title: "OK", style: .default) { alert in
-                    nameOfPlant = (messsage.textFields?.first!.text)!
-                    plantsContainer.append(Plants(imageSet: "Fern", typeName: "Fern", nickName: nameOfPlant, wateringFrequency: 10))
-                    LocalStorage.saveToFile(plantsList: plantsContainer)
-                }
-                messsage.addAction(add)
-
-            }
-            self.present(messsage, animated: true, completion: nil)
-            
-        case "Orchid":
-            let messsage = UIAlertController(title: "", message: "What would you like to name your new plant?", preferredStyle: .alert)
-            messsage.addTextField { UITextField in
-                UITextField.placeholder = "Type name here"
-                
-                let add = UIAlertAction(title: "OK", style: .default) { alert in
-                    nameOfPlant = (messsage.textFields?.first!.text)!
-                    plantsContainer.append(Plants(imageSet: "Orchid", typeName: "Orchid", nickName: nameOfPlant, wateringFrequency: 10))
-                    LocalStorage.saveToFile(plantsList: plantsContainer)
-                }
-                messsage.addAction(add)
-
-            }
-            self.present(messsage, animated: true, completion: nil)
-            
-        case "Jade":
-            let messsage = UIAlertController(title: "", message: "What would you like to name your new plant?", preferredStyle: .alert)
-            messsage.addTextField { UITextField in
-                UITextField.placeholder = "Type name here"
-                
-                let add = UIAlertAction(title: "OK", style: .default) { alert in
-                    nameOfPlant = (messsage.textFields?.first!.text)!
-                    plantsContainer.append(Plants(imageSet: "Jade", typeName: "Jade", nickName: nameOfPlant, wateringFrequency: 10))
-                    LocalStorage.saveToFile(plantsList: plantsContainer)
-                }
-                messsage.addAction(add)
-
-            }
-            self.present(messsage, animated: true, completion: nil)
-            
-        default:
-            print("error")
-            
-        }
         
     }
     
-    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let currentTable = tableView.indexPathForSelectedRow
-        
-        let vc = TestViewController()
-        navigationController?.pushViewController(vc, animated: true)
-        return nil
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as!  ARDetailViewController
+        destinationVC.passPlantName = plantsArr[tableView.indexPathForSelectedRow!.row].name
+        destinationVC.passPlantImage = plantsArr[tableView.indexPathForSelectedRow!.row].plantIcon
+        destinationVC.passCareTipsLabel = plantsArr[tableView.indexPathForSelectedRow!.row].careTips
+        destinationVC.passWateringFrequencyLabel = plantsArr[tableView.indexPathForSelectedRow!.row].wateringFreq
+        destinationVC.passResolveLabel = plantsArr[tableView.indexPathForSelectedRow!.row].resolveText
+   
     }
+    
+
 
 }
 
 
-extension ARViewController: CatalogueTableViewCellDelegate {
-    
-    
-    func didTapButton(with title: String) {
-        print("\(title)")
-        arTitle = title
-    }
-}
+
