@@ -11,7 +11,10 @@ class NotificationCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var plantImage: UIImageView!
     @IBOutlet var plantName: UILabel!
+    
+    
     func configureCollectionCell(with plant: Plants) {
+        print("configure cell")
         switch plant.name {
             case "Monstera":
                 plantImage.image = UIImage(named: "fern")
@@ -29,5 +32,8 @@ class NotificationCollectionViewCell: UICollectionViewCell {
         let waterNeed = (plant.maxWaterLevel - plant.waterLevel) / 10
         
         plantName.text = "\(plant.myName) needs \(waterNeed) water"
+        if (plant.waterLevel <= 0) {
+            plantName.text = "\(plant.myName) has died!"
+        }
     }
 }

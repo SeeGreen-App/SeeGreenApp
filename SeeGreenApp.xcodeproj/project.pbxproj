@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3F091ADF273B5C5E00C5EC73 /* plants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F091ADE273B5C5E00C5EC73 /* plants.swift */; };
-		3F091AE3273B746800C5EC73 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F091AE2273B746800C5EC73 /* TestViewController.swift */; };
+		3F27AA03276EE5FC0028E432 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F27AA02276EE5FC0028E432 /* Main.storyboard */; };
+		3F27AA05276EE6060028E432 /* ARSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F27AA04276EE6060028E432 /* ARSceneViewController.swift */; };
+		3F27AA0A276EE93B0028E432 /* plantCareTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F27AA09276EE93B0028E432 /* plantCareTableViewCell.swift */; };
 		3F2FE45E275EC97000062FD6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FE45D275EC97000062FD6 /* GoogleService-Info.plist */; };
 		3F2FE460276059EB00062FD6 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2FE45F276059EB00062FD6 /* LocalStorage.swift */; };
 		3F650C24273F2E84002813BC /* RoundLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F650C23273F2E83002813BC /* RoundLabel.swift */; };
@@ -16,7 +18,6 @@
 		3F650C28273F3EA3002813BC /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F650C27273F3EA3002813BC /* RoundedView.swift */; };
 		3F830179273CCCF1007B2160 /* Gaegu-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F830178273CCCEC007B2160 /* Gaegu-Regular.ttf */; };
 		3F83017B273CCDAF007B2160 /* LocalBreweryFour-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F83017A273CCD08007B2160 /* LocalBreweryFour-Regular.ttf */; };
-		3F880ECC27444AB2008AE5F4 /* NotificationPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F880ECB27444AB2008AE5F4 /* NotificationPublisher.swift */; };
 		3FA1A601276ABB2300DAE8FB /* NotificationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA1A600276ABB2300DAE8FB /* NotificationCollectionViewCell.swift */; };
 		3FA1A603276ABDCB00DAE8FB /* ARDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA1A602276ABDCB00DAE8FB /* ARDetailViewController.swift */; };
 		3FD6332D273DB21F00F1EEA4 /* CatalogueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD6332B273DB21F00F1EEA4 /* CatalogueTableViewCell.swift */; };
@@ -26,19 +27,21 @@
 		3FD985622759A21F004F6D05 /* WateringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD985612759A21F004F6D05 /* WateringViewController.swift */; };
 		3FF1C7672722270E0004F58D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1C7662722270E0004F58D /* AppDelegate.swift */; };
 		3FF1C7692722270E0004F58D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1C7682722270E0004F58D /* SceneDelegate.swift */; };
-		3FF1C76B2722270E0004F58D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1C76A2722270E0004F58D /* ViewController.swift */; };
-		3FF1C76E2722270E0004F58D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FF1C76C2722270E0004F58D /* Main.storyboard */; };
 		3FF1C770272227100004F58D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FF1C76F272227100004F58D /* Assets.xcassets */; };
 		3FF1C773272227100004F58D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FF1C771272227100004F58D /* LaunchScreen.storyboard */; };
 		7B953503E314AF5BBDAF2C5D /* Pods_SeeGreenApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D18AAC31C31EEF13F1D536D0 /* Pods_SeeGreenApp.framework */; };
-		EEB9D66027279E7400E9643F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB9D65F27279E7400E9643F /* MapViewController.swift */; };
 		EEB9D66227279E8400E9643F /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB9D66127279E8400E9643F /* ARViewController.swift */; };
 		EEB9D66427279E9A00E9643F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB9D66327279E9A00E9643F /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3F091ADE273B5C5E00C5EC73 /* plants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = plants.swift; sourceTree = "<group>"; };
-		3F091AE2273B746800C5EC73 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		3F27AA02276EE5FC0028E432 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		3F27AA04276EE6060028E432 /* ARSceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARSceneViewController.swift; sourceTree = "<group>"; };
+		3F27AA06276EE6160028E432 /* monstera.reality */ = {isa = PBXFileReference; lastKnownFileType = file; path = monstera.reality; sourceTree = "<group>"; };
+		3F27AA07276EE61F0028E432 /* orchid.reality */ = {isa = PBXFileReference; lastKnownFileType = file; path = orchid.reality; sourceTree = "<group>"; };
+		3F27AA08276EE6210028E432 /* basil.reality */ = {isa = PBXFileReference; lastKnownFileType = file; path = basil.reality; sourceTree = "<group>"; };
+		3F27AA09276EE93B0028E432 /* plantCareTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = plantCareTableViewCell.swift; sourceTree = "<group>"; };
 		3F2FE45D275EC97000062FD6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3F2FE45F276059EB00062FD6 /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
 		3F650C23273F2E83002813BC /* RoundLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundLabel.swift; sourceTree = "<group>"; };
@@ -46,7 +49,6 @@
 		3F650C27273F3EA3002813BC /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		3F830178273CCCEC007B2160 /* Gaegu-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gaegu-Regular.ttf"; sourceTree = "<group>"; };
 		3F83017A273CCD08007B2160 /* LocalBreweryFour-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LocalBreweryFour-Regular.ttf"; sourceTree = "<group>"; };
-		3F880ECB27444AB2008AE5F4 /* NotificationPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPublisher.swift; sourceTree = "<group>"; };
 		3F880ECE27444B4E008AE5F4 /* SeeGreenApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SeeGreenApp.entitlements; sourceTree = "<group>"; };
 		3FA1A600276ABB2300DAE8FB /* NotificationCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCollectionViewCell.swift; sourceTree = "<group>"; };
 		3FA1A602276ABDCB00DAE8FB /* ARDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARDetailViewController.swift; sourceTree = "<group>"; };
@@ -58,15 +60,12 @@
 		3FF1C7632722270E0004F58D /* SeeGreenApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeeGreenApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FF1C7662722270E0004F58D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FF1C7682722270E0004F58D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3FF1C76A2722270E0004F58D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3FF1C76D2722270E0004F58D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3FF1C76F272227100004F58D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FF1C772272227100004F58D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3FF1C774272227100004F58D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5D4A4F89302A70B63A0E27F /* Pods-SeeGreenApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeeGreenApp.release.xcconfig"; path = "Target Support Files/Pods-SeeGreenApp/Pods-SeeGreenApp.release.xcconfig"; sourceTree = "<group>"; };
 		B9EB1DCFD550F70DA6005CA4 /* Pods-SeeGreenApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeeGreenApp.debug.xcconfig"; path = "Target Support Files/Pods-SeeGreenApp/Pods-SeeGreenApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D18AAC31C31EEF13F1D536D0 /* Pods_SeeGreenApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SeeGreenApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EEB9D65F27279E7400E9643F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		EEB9D66127279E8400E9643F /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		EEB9D66327279E9A00E9643F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,17 +103,19 @@
 		3FF1C7652722270E0004F58D /* SeeGreenApp */ = {
 			isa = PBXGroup;
 			children = (
+				3F27AA06276EE6160028E432 /* monstera.reality */,
+				3F27AA07276EE61F0028E432 /* orchid.reality */,
+				3F27AA08276EE6210028E432 /* basil.reality */,
 				3FA1A600276ABB2300DAE8FB /* NotificationCollectionViewCell.swift */,
 				3F880ECE27444B4E008AE5F4 /* SeeGreenApp.entitlements */,
 				3FF1C7662722270E0004F58D /* AppDelegate.swift */,
 				3FF1C7682722270E0004F58D /* SceneDelegate.swift */,
-				3FF1C76A2722270E0004F58D /* ViewController.swift */,
-				3FF1C76C2722270E0004F58D /* Main.storyboard */,
-				3F880ECB27444AB2008AE5F4 /* NotificationPublisher.swift */,
+				3F27AA04276EE6060028E432 /* ARSceneViewController.swift */,
 				3F650C27273F3EA3002813BC /* RoundedView.swift */,
 				3FA1A602276ABDCB00DAE8FB /* ARDetailViewController.swift */,
 				3F650C23273F2E83002813BC /* RoundLabel.swift */,
 				3F650C25273F3765002813BC /* RoundedTabBar.swift */,
+				3F27AA02276EE5FC0028E432 /* Main.storyboard */,
 				3F830178273CCCEC007B2160 /* Gaegu-Regular.ttf */,
 				3F83017A273CCD08007B2160 /* LocalBreweryFour-Regular.ttf */,
 				3FF1C76F272227100004F58D /* Assets.xcassets */,
@@ -122,13 +123,12 @@
 				3FF1C774272227100004F58D /* Info.plist */,
 				3FD9855D2759A177004F6D05 /* WateringTableViewCell.swift */,
 				3FD9855E2759A177004F6D05 /* WateringTableViewCell.xib */,
-				EEB9D65F27279E7400E9643F /* MapViewController.swift */,
 				3FD985612759A21F004F6D05 /* WateringViewController.swift */,
+				3F27AA09276EE93B0028E432 /* plantCareTableViewCell.swift */,
 				EEB9D66127279E8400E9643F /* ARViewController.swift */,
 				EEB9D66327279E9A00E9643F /* HomeViewController.swift */,
 				3F2FE45F276059EB00062FD6 /* LocalStorage.swift */,
 				3F091ADE273B5C5E00C5EC73 /* plants.swift */,
-				3F091AE2273B746800C5EC73 /* TestViewController.swift */,
 				3FD6332B273DB21F00F1EEA4 /* CatalogueTableViewCell.swift */,
 				3FD6332C273DB21F00F1EEA4 /* CatalogueTableViewCell.xib */,
 				3F2FE45D275EC97000062FD6 /* GoogleService-Info.plist */,
@@ -215,8 +215,8 @@
 				3FF1C773272227100004F58D /* LaunchScreen.storyboard in Resources */,
 				3F2FE45E275EC97000062FD6 /* GoogleService-Info.plist in Resources */,
 				3F830179273CCCF1007B2160 /* Gaegu-Regular.ttf in Resources */,
+				3F27AA03276EE5FC0028E432 /* Main.storyboard in Resources */,
 				3FF1C770272227100004F58D /* Assets.xcassets in Resources */,
-				3FF1C76E2722270E0004F58D /* Main.storyboard in Resources */,
 				3FD985602759A177004F6D05 /* WateringTableViewCell.xib in Resources */,
 				3F83017B273CCDAF007B2160 /* LocalBreweryFour-Regular.ttf in Resources */,
 				3FD6332E273DB21F00F1EEA4 /* CatalogueTableViewCell.xib in Resources */,
@@ -272,20 +272,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FF1C76B2722270E0004F58D /* ViewController.swift in Sources */,
 				3F650C26273F3765002813BC /* RoundedTabBar.swift in Sources */,
-				3F880ECC27444AB2008AE5F4 /* NotificationPublisher.swift in Sources */,
 				3F650C24273F2E84002813BC /* RoundLabel.swift in Sources */,
 				3FA1A603276ABDCB00DAE8FB /* ARDetailViewController.swift in Sources */,
 				3FD9855F2759A177004F6D05 /* WateringTableViewCell.swift in Sources */,
+				3F27AA0A276EE93B0028E432 /* plantCareTableViewCell.swift in Sources */,
 				3FF1C7672722270E0004F58D /* AppDelegate.swift in Sources */,
 				3FD6332D273DB21F00F1EEA4 /* CatalogueTableViewCell.swift in Sources */,
 				3FA1A601276ABB2300DAE8FB /* NotificationCollectionViewCell.swift in Sources */,
-				3F091AE3273B746800C5EC73 /* TestViewController.swift in Sources */,
 				3FF1C7692722270E0004F58D /* SceneDelegate.swift in Sources */,
 				3F091ADF273B5C5E00C5EC73 /* plants.swift in Sources */,
 				3FD985622759A21F004F6D05 /* WateringViewController.swift in Sources */,
-				EEB9D66027279E7400E9643F /* MapViewController.swift in Sources */,
+				3F27AA05276EE6060028E432 /* ARSceneViewController.swift in Sources */,
 				EEB9D66227279E8400E9643F /* ARViewController.swift in Sources */,
 				3F2FE460276059EB00062FD6 /* LocalStorage.swift in Sources */,
 				3F650C28273F3EA3002813BC /* RoundedView.swift in Sources */,
@@ -296,14 +294,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3FF1C76C2722270E0004F58D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3FF1C76D2722270E0004F58D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3FF1C771272227100004F58D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

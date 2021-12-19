@@ -6,9 +6,10 @@
 //
 
 import UIKit
+import RealityKit
 
 class ARDetailViewController: UIViewController {
-
+    
     @IBOutlet var plantName: UILabel!
     @IBOutlet var plantImage: UIImageView!
     @IBOutlet var careTipsLabel: UILabel!
@@ -34,7 +35,7 @@ class ARDetailViewController: UIViewController {
     }
     
     @IBAction func plantAdd(_ sender: Any) {
-        let name:String = passPlantName
+        let name : String = passPlantName
         var nameOfPlant = "Unnamed"
         switch name {
         case "Monstera":
@@ -119,6 +120,13 @@ class ARDetailViewController: UIViewController {
         }
     }
     
+    @IBAction func plantAR(_ sender: Any) {
+        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            let destinationVC = segue.destination as! ARSceneViewController
+            let name : String = passPlantName
+            destinationVC.plantName = name
+        }
+    }
     
 
     /*

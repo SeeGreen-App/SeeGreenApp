@@ -16,9 +16,8 @@ class CatalogueTableViewCell: UITableViewCell {
     
     var delegate: CatalogueTableViewCellDelegate?
     
-    @IBOutlet var plantPictureTableView: UIImageView!
-    
     @IBOutlet var plantName: UILabel!
+    
     @IBOutlet var plantDescription: UILabel!
     
     @IBAction func buttonAR(_ sender: Any) {

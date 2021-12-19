@@ -33,8 +33,8 @@ class ARViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(CatalogueTableViewCell.nib(), forCellReuseIdentifier: "CatalogueTableViewCell")
-        self.tableView.rowHeight = 125
+        //tableView.register(CatalogueTableViewCell.nib(), forCellReuseIdentifier: "CatalogueTableViewCell")
+        self.tableView.rowHeight = 100
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -43,10 +43,9 @@ class ARViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "catalogueCell", for: indexPath)
-        cell.selectionStyle = .none
-        cell.textLabel!.text = plantsArr[indexPath.row].name
-        cell.detailTextLabel?.text = plantsArr[indexPath.row].description
+        let cell = tableView.dequeueReusableCell(withIdentifier: "catalogueCell") as! CatalogueTableViewCell
+        cell.plantName.text = plantsArr[indexPath.row].name
+        cell.plantDescription.text =  plantsArr[indexPath.row].description
         return cell
     }
     
@@ -55,7 +54,7 @@ class ARViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destinationVC = segue.destination as!  ARDetailViewController
+        let destinationVC = segue.destination as! ARDetailViewController
         destinationVC.passPlantName = plantsArr[tableView.indexPathForSelectedRow!.row].name
         destinationVC.passPlantImage = plantsArr[tableView.indexPathForSelectedRow!.row].plantIcon
         destinationVC.passCareTipsLabel = plantsArr[tableView.indexPathForSelectedRow!.row].careTips

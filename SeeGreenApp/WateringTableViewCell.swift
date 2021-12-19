@@ -10,12 +10,12 @@ import UIKit
 class WateringTableViewCell: UITableViewCell {
     
     @IBOutlet var plantName: UILabel!
-    
     @IBOutlet var plantImage: UIImageView!
     
     @IBOutlet var plantType: UILabel!
     
-    @IBOutlet var waterLevel: UILabel!
+    @IBOutlet var growthLabel: UILabel!
+    @IBOutlet var plantGrowthLevel: UIProgressView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -46,7 +46,22 @@ class WateringTableViewCell: UITableViewCell {
         
         plantName.text = plant.myName
         plantType.text = plant.name
-        waterLevel.text = String(plant.waterLevel)
+        //waterLevel.text = String(plant.waterLevel)
+        plantGrowthLevel.progress = plant.growthProgress
+        if (plant.growthProgress >= 1.0) {
+            self.backgroundColor = #colorLiteral(red: 0.907879293, green: 0.8135741353, blue: 0.04839689285, alpha: 1)
+            growthLabel.text = "Full adult!"
+        } else {
+            self.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        }
+        if (plant.growthProgress < 1.0 && plant.growthProgress > 0.5 ) {
+            growthLabel.text = "Almost there!"
+        } else if (plant.growthProgress < 0.5) {
+            growthLabel.text = "Seedling!"
+        }
+        if (plant.waterLevel == 0) {
+            growthLabel.text = "Oh no!"
+        }
     }
     
 }

@@ -15,14 +15,7 @@ struct LocalStorage {
     static var archiveUrl = documentsDirectory.appendingPathComponent("Plants-List").appendingPathExtension("plist")
     
     static var savedUrl = documentsDirectory.appendingPathComponent("Last-date").appendingPathExtension("plist")
-    
-    static func saveDate(date: Int) {
-        let encoder = PropertyListEncoder()
         
-        let encodedDate = try? encoder.encode(date)
-        try? encodedDate?.write(to: savedUrl)
-    }
-    
     static func loadDateFromFile() -> Int {
         let decoder = PropertyListDecoder()
         

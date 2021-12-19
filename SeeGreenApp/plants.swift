@@ -9,14 +9,16 @@ import Foundation
 import UIKit
 
 class Plants: Codable {
-    init (imageSet:String, typeName:String, nickName:String, wateringFrequency: Int, waterLevelPass: Int) {
+    init (imageSet: String, typeName: String, nickName: String, wateringFrequency: Int, waterLevelPass: Int, setGrowthProgress:Float = 0) {
         image = imageSet
         name = typeName
         myName = nickName
         wateringNeed = wateringFrequency
         waterLevel = waterLevelPass
         maxWaterLevel = waterLevelPass
+        growthProgress = setGrowthProgress
     }
+    var growthProgress:Float = 0
     var maxWaterLevel:Int = 20
     var image:String = "nil"
     var waterLevel = 100;

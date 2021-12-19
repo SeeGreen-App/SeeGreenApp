@@ -11,26 +11,34 @@ import Firebase
 import FirebaseStorage
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    
 
-    private func requestNotificationAuthorization(applicaiton: UIApplication) {
-        
+  
     
-    let center = UNUserNotificationCenter.current()
-    let options : UNAuthorizationOptions = [.alert, .badge, .sound]
-    
-    center.requestAuthorization(options: options) {
-        granted, error in
-        if let error = error {
-            print(error.localizedDescription)
-        }
+    func applicationWillResignActive(_ application: UIApplication) {
+        UserDefaults.standard.set(Date(), forKey: "LastOpened")
+        print("saving done")
     }
+    
+    
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        print("got in here")
+        guard let lastOpened = UserDefaults.standard.object(forKey: "LastOpened") as? Date else {
+            print("null last date")
+            return
+        }
+        let elapsed = Calendar.current.dateComponents([.minute], from: lastOpened, to: Date())
+        
+        var elapsedMinute = elapsed.minute!
+        print("This is the elapsed date: \(elapsedMinute)")
+        
     }
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        requestNotificationAuthorization(applicaiton: application)
-        registerForPushNotifications()
+
         FirebaseApp.configure()
         return true
     }
