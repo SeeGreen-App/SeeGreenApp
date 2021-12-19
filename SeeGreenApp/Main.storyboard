@@ -462,7 +462,7 @@
                                     <constraint firstAttribute="width" secondItem="tP7-yY-gJc" secondAttribute="height" multiplier="126:241" constant="19.999999999999986" id="aKZ-wQ-iEr"/>
                                     <constraint firstAttribute="height" constant="241" id="bvQ-e3-TcW"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="36"/>
+                                <fontDescription key="fontDescription" name="LocalBreweryFour-Regular" family="Local Brewery" pointSize="36"/>
                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -500,6 +500,7 @@
                                 </state>
                                 <connections>
                                     <action selector="plantAR:" destination="Wtf-Nb-1pm" eventType="touchUpInside" id="fyh-tV-4YB"/>
+                                    <action selector="plantAdd:" destination="Wtf-Nb-1pm" eventType="touchUpInside" id="Rin-XL-556"/>
                                     <segue destination="o2B-SV-Ipo" kind="showDetail" id="k32-y6-BQ4"/>
                                 </connections>
                             </button>

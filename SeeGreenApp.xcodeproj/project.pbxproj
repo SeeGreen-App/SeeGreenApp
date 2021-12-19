@@ -11,6 +11,7 @@
 		3F27AA03276EE5FC0028E432 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F27AA02276EE5FC0028E432 /* Main.storyboard */; };
 		3F27AA05276EE6060028E432 /* ARSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F27AA04276EE6060028E432 /* ARSceneViewController.swift */; };
 		3F27AA0A276EE93B0028E432 /* plantCareTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F27AA09276EE93B0028E432 /* plantCareTableViewCell.swift */; };
+		3F27AA0C276F27E30028E432 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F27AA0B276F27E30028E432 /* TabBarController.swift */; };
 		3F2FE45E275EC97000062FD6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FE45D275EC97000062FD6 /* GoogleService-Info.plist */; };
 		3F2FE460276059EB00062FD6 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2FE45F276059EB00062FD6 /* LocalStorage.swift */; };
 		3F650C24273F2E84002813BC /* RoundLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F650C23273F2E83002813BC /* RoundLabel.swift */; };
@@ -42,6 +43,7 @@
 		3F27AA07276EE61F0028E432 /* orchid.reality */ = {isa = PBXFileReference; lastKnownFileType = file; path = orchid.reality; sourceTree = "<group>"; };
 		3F27AA08276EE6210028E432 /* basil.reality */ = {isa = PBXFileReference; lastKnownFileType = file; path = basil.reality; sourceTree = "<group>"; };
 		3F27AA09276EE93B0028E432 /* plantCareTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = plantCareTableViewCell.swift; sourceTree = "<group>"; };
+		3F27AA0B276F27E30028E432 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		3F2FE45D275EC97000062FD6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3F2FE45F276059EB00062FD6 /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
 		3F650C23273F2E83002813BC /* RoundLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundLabel.swift; sourceTree = "<group>"; };
@@ -103,15 +105,16 @@
 		3FF1C7652722270E0004F58D /* SeeGreenApp */ = {
 			isa = PBXGroup;
 			children = (
-				3F27AA06276EE6160028E432 /* monstera.reality */,
 				3F27AA07276EE61F0028E432 /* orchid.reality */,
 				3F27AA08276EE6210028E432 /* basil.reality */,
+				3F27AA06276EE6160028E432 /* monstera.reality */,
 				3FA1A600276ABB2300DAE8FB /* NotificationCollectionViewCell.swift */,
 				3F880ECE27444B4E008AE5F4 /* SeeGreenApp.entitlements */,
 				3FF1C7662722270E0004F58D /* AppDelegate.swift */,
 				3FF1C7682722270E0004F58D /* SceneDelegate.swift */,
 				3F27AA04276EE6060028E432 /* ARSceneViewController.swift */,
 				3F650C27273F3EA3002813BC /* RoundedView.swift */,
+				3F27AA0B276F27E30028E432 /* TabBarController.swift */,
 				3FA1A602276ABDCB00DAE8FB /* ARDetailViewController.swift */,
 				3F650C23273F2E83002813BC /* RoundLabel.swift */,
 				3F650C25273F3765002813BC /* RoundedTabBar.swift */,
@@ -278,6 +281,7 @@
 				3FD9855F2759A177004F6D05 /* WateringTableViewCell.swift in Sources */,
 				3F27AA0A276EE93B0028E432 /* plantCareTableViewCell.swift in Sources */,
 				3FF1C7672722270E0004F58D /* AppDelegate.swift in Sources */,
+				3F27AA0C276F27E30028E432 /* TabBarController.swift in Sources */,
 				3FD6332D273DB21F00F1EEA4 /* CatalogueTableViewCell.swift in Sources */,
 				3FA1A601276ABB2300DAE8FB /* NotificationCollectionViewCell.swift in Sources */,
 				3FF1C7692722270E0004F58D /* SceneDelegate.swift in Sources */,
@@ -429,6 +433,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = SeeGreenApp/SeeGreenApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ADXY6GAL29;
 				INFOPLIST_FILE = SeeGreenApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -449,6 +454,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = SeeGreenApp/SeeGreenApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ADXY6GAL29;
 				INFOPLIST_FILE = SeeGreenApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

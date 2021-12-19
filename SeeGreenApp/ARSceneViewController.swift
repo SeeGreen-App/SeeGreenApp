@@ -7,30 +7,43 @@
 import Foundation
 import UIKit
 import RealityKit
+import QuickLook
 
-class ARSceneViewController: UIViewController {
+
+class ARSceneViewController: UIViewController{
+
+    
     
     @IBOutlet var arView: ARView!
-    var plantName: String = ""
+    var arName: String = ""
+
+ //   let monsteraAnchor = try? Entity.loadAnchor(named: "monstera")
+ //   let basilAnchor = try? Entity.loadAnchor(named: "basil")
+ //   let orchidAnchor = try? Entity.loadAnchor(named: "orchid")
     override func viewDidLoad() {
         super.viewDidLoad()
-        let name : String = plantName
         
+        let name : String = arName
+        print(name)
+
+
         switch name {
             case "Monstera":
-            let url = URL(fileURLWithPath: "./monstera.reality")
-            _ = try? Entity.load(contentsOf: url, withName: "monstera")
-             //   let monsteraAnchor = try? Entity.loadAnchor(named: "monstera")
-           // arView.scene.anchors.append(contentsOf: monsteraAnchor)
-            case "Basil":
-            let url = URL(fileURLWithPath: "./basil.reality")
-            _ = try? Entity.load(contentsOf: url, withName: "basil")
-            //    let basilAnchor = try? Entity.loadAnchor(named: "basil")
+            print("ar scene")
+               //let url = URL(fileURLWithPath: "./monstera.reality")
+              // let entity = try? Entity.load(contentsOf: url)
+            
+
+            
+        //case "Basil":
+        //  let url = URL(fileURLWithPath: "./basil.reality")
+         //  _ = try? Entity.load(contentsOf: url, withName: "basil")
+
            // arView.scene.anchors.append(basilAnchor)
-            case "Orchid":
-            let url = URL(fileURLWithPath: "./orchid.reality")
-            _ = try? Entity.load(contentsOf: url, withName: "orchid")
-            //   let orchidAnchor = try? Entity.loadAnchor(named: "orchid")
+//            case "Orchid":
+//            let url = URL(fileURLWithPath: "./orchid.reality")
+//            _ = try? Entity.load(contentsOf: url, withName: "orchid")
+
             //arView.scene.anchors.append(orchidAnchor)
         default:
             print("error")

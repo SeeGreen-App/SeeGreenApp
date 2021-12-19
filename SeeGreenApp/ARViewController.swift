@@ -13,21 +13,17 @@ class ARViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
     var arTitle:String = ""
     
     var plantsArr = [
-        plantsDescription(setName: "Monstera", setDescrip: "Aka the swiss cheese plant.", setImg: UIImage(systemName: "pencil")!, setCareTips: "Easiest to take care off, great starter plant", setWateringFreqText: "Infrequent", setResolveText: "Hardy plant, won't need to water often"),
+        plantsDescription(setName: "Monstera", setDescrip: "Aka the swiss cheese plant.", setImg: UIImage(named: "fern")!, setCareTips: "Easiest to take care off, great starter plant", setWateringFreqText: "Infrequent", setResolveText: "Hardy plant, won't need to water often"),
         
-        plantsDescription(setName: "Basil", setDescrip: "Not just a garnish!", setImg: UIImage(systemName: "pencil")!, setCareTips: "fickle, can't store much water", setWateringFreqText: "freqeunt", setResolveText: "Can moderately withstand dry periods"),
+        plantsDescription(setName: "Basil", setDescrip: "Not just a garnish!", setImg: UIImage(named: "basil")!, setCareTips: "fickle, can't store much water", setWateringFreqText: "freqeunt", setResolveText: "Can moderately withstand dry periods"),
         
-        plantsDescription(setName: "Fern", setDescrip: "No tanning sessions for this plant!", setImg: UIImage(systemName: "pencil")!, setCareTips: "It's almost as easy as the Monstera!", setWateringFreqText: "Semi-frequent", setResolveText: "moderately resistant"),
+        plantsDescription(setName: "Fern", setDescrip: "No tanning sessions for this plant!", setImg: UIImage(named: "fern")!, setCareTips: "It's almost as easy as the Monstera!", setWateringFreqText: "Semi-frequent", setResolveText: "moderately resistant"),
         
-        plantsDescription(setName: "Orchid", setDescrip: "Also a symbol for love...", setImg: UIImage(systemName: "pencil")!, setCareTips: "Needs a lot of water and direct sunlight!", setWateringFreqText: "Water this one frequently", setResolveText: "Although resistant, need to water frequently"),
+        plantsDescription(setName: "Orchid", setDescrip: "Also a symbol for love...", setImg: UIImage(named: "orchid")!, setCareTips: "Needs a lot of water and direct sunlight!", setWateringFreqText: "Water this one frequently", setResolveText: "Although resistant, need to water frequently"),
         
-        plantsDescription(setName: "Jade", setDescrip: "Like a mini-tree!", setImg: UIImage(systemName: "pencil")!, setCareTips: "Water this one infrequently! Hardy plant but not alot of health", setWateringFreqText: "infrequent", setResolveText: "High resolve")
+        plantsDescription(setName: "Jade", setDescrip: "Like a mini-tree!", setImg: UIImage(named: "basil")!, setCareTips: "Water this one infrequently! Hardy plant but not alot of health", setWateringFreqText: "infrequent", setResolveText: "High resolve")
     ]
     @IBOutlet var tableView: UITableView!
-    
-
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,9 +56,11 @@ class ARViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
         destinationVC.passCareTipsLabel = plantsArr[tableView.indexPathForSelectedRow!.row].careTips
         destinationVC.passWateringFrequencyLabel = plantsArr[tableView.indexPathForSelectedRow!.row].wateringFreq
         destinationVC.passResolveLabel = plantsArr[tableView.indexPathForSelectedRow!.row].resolveText
+        
    
     }
-    
+
+
 
 
 }

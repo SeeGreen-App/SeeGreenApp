@@ -28,10 +28,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("null last date")
             return
         }
-        let elapsed = Calendar.current.dateComponents([.minute], from: lastOpened, to: Date())
+        let elapsed = Calendar.current.dateComponents([.hour], from: lastOpened, to: Date())
         
-        var elapsedMinute = elapsed.minute!
-        print("This is the elapsed date: \(elapsedMinute)")
+        var elapsedHour = elapsed.hour!
+        print("This is the elapsed date: \(elapsedHour)")
         
     }
     

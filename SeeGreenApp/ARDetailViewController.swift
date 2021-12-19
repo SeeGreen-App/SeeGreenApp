@@ -33,9 +33,17 @@ class ARDetailViewController: UIViewController {
         resolveLabel.text = passResolveLabel
         
     }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let name : String = passPlantName
+        let destinationVC = segue.destination as! ARSceneViewController
+        destinationVC.arName = name
+    }
+    
     
     @IBAction func plantAdd(_ sender: Any) {
         let name : String = passPlantName
+        print("plantADD")
         var nameOfPlant = "Unnamed"
         switch name {
         case "Monstera":
@@ -121,13 +129,10 @@ class ARDetailViewController: UIViewController {
     }
     
     @IBAction func plantAR(_ sender: Any) {
-        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            let destinationVC = segue.destination as! ARSceneViewController
-            let name : String = passPlantName
-            destinationVC.plantName = name
-        }
+        print("button press")
+        
     }
-    
+
 
     /*
     // MARK: - Navigation
